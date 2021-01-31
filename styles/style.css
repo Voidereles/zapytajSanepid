@@ -214,6 +214,45 @@ body {
   color: #231f20;
 }
 
+.counters__item {
+  background: #f2f1e6;
+  border-radius: 1rem;
+}
+
+.counters__icon-container {
+  background: linear-gradient(45deg, #2384ba 0%, #37a0cd 100%);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+}
+
+.counters__icon {
+  padding: .5rem;
+}
+
+.counters__text {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.counters__number {
+  font-weight: 700;
+  font-size: 1.625rem;
+  color: #f47826;
+}
+
 .cls-1 {
   fill: #231f20;
 }

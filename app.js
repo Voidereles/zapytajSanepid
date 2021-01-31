@@ -7,7 +7,35 @@ AOS.init({
     // once: true
 });
 
-// $('.ask-animation').each(function (i) {
-//     $(this).addClass('aos-init aos-animate');
-//     $(this).attr('data-aos', 'fade-in-left');
-// });
+
+let a = 0;
+$(window).scroll(function () {
+
+    let counter = $('.counters');
+    let oTop = counter.offset().top - window.innerHeight;
+    if (a == 0 && $(window).scrollTop() > oTop) {
+        $('.counters__number').each(function () {
+            let $this = $(this),
+                countTo = $this.attr('data-count');
+            $({
+                countNum: $this.text()
+            }).animate({
+                    countNum: countTo
+                },
+
+                {
+                    duration: 4000,
+                    easing: 'swing',
+                    step: function () {
+                        $this.text(Math.floor(this.countNum));
+                    },
+                    complete: function () {
+                        $this.text(this.countNum);
+                    }
+
+                });
+        });
+        a = 1;
+    }
+
+});

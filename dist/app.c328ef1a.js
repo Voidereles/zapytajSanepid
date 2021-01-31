@@ -18282,11 +18282,36 @@ _aos.default.init({
   duration: 500 // easing: 'cubic-bezier(.91, .11, .19, .92)'
   // once: true
 
-}); // $('.ask-animation').each(function (i) {
-//     $(this).addClass('aos-init aos-animate');
-//     $(this).attr('data-aos', 'fade-in-left');
-// });
-},{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","aos":"node_modules/aos/dist/aos.js"}],"../../../../AppData/Roaming/npm-cache/_npx/24736/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+});
+
+var a = 0;
+$(window).scroll(function () {
+  var counter = $('.counters');
+  var oTop = counter.offset().top - window.innerHeight;
+
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('.counters__number').each(function () {
+      var $this = $(this),
+          countTo = $this.attr('data-count');
+      $({
+        countNum: $this.text()
+      }).animate({
+        countNum: countTo
+      }, {
+        duration: 4000,
+        easing: 'swing',
+        step: function step() {
+          $this.text(Math.floor(this.countNum));
+        },
+        complete: function complete() {
+          $this.text(this.countNum);
+        }
+      });
+    });
+    a = 1;
+  }
+});
+},{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","aos":"node_modules/aos/dist/aos.js"}],"../../../../AppData/Roaming/npm-cache/_npx/27328/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -18314,7 +18339,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51700" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55753" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -18490,5 +18515,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/24736/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/27328/node_modules/parcel/src/builtins/hmr-runtime.js","app.js"], null)
 //# sourceMappingURL=/app.c328ef1a.js.map

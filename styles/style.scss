@@ -141,10 +141,45 @@
     }
 }
 
+.counters {
+    &__item {
+        background: $backgroundGrey;
+        border-radius: 1rem;
+    }
+
+    &__icon-container {
+        background: $kongresGradient;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        margin: auto;
+    }
+
+    &__icon {
+        padding: .5rem;
+    }
+
+    &__text {
+        margin-top: 1rem;
+        font-size: $fontSizeBodyS;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    &__number {
+        font-weight: 700;
+        font-size: $fontSizeH3;
+        color: $kongresOrange;
+    }
+}
+
 .cls-1 {
-    fill: #231f20;
+    fill: $kongresDark;
 }
 
 .cls-2 {
-    fill: #2384ba;
+    fill: $kongresLightBlue;
 }

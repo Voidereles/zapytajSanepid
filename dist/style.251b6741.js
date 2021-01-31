@@ -196,7 +196,7 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/1036/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/24736/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/1036/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/27328/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -228,7 +228,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../AppData/Roaming/npm-cache/_npx/24736/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../AppData/Roaming/npm-cache/_npx/27328/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -263,12 +263,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../AppData/Roaming/npm-cache/_npx/24736/node_modules/parcel/src/builtins/bundle-url.js"}],"styles/style.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../../AppData/Roaming/npm-cache/_npx/27328/node_modules/parcel/src/builtins/bundle-url.js"}],"styles/style.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","aos/dist/aos.css":"node_modules/aos/dist/aos.css","./..\\fonts\\BalooPaaji2-Bold.ttf":[["BalooPaaji2-Bold.2c07b7d5.ttf","fonts/BalooPaaji2-Bold.ttf"],"fonts/BalooPaaji2-Bold.ttf"],"./..\\fonts\\BalooPaaji2-SemiBold.ttf":[["BalooPaaji2-SemiBold.6845e0a8.ttf","fonts/BalooPaaji2-SemiBold.ttf"],"fonts/BalooPaaji2-SemiBold.ttf"],"./..\\fonts\\BalooPaaji2-Regular.ttf":[["BalooPaaji2-Regular.096a06a5.ttf","fonts/BalooPaaji2-Regular.ttf"],"fonts/BalooPaaji2-Regular.ttf"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/24736/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/24736/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"bootstrap/dist/css/bootstrap.min.css":"node_modules/bootstrap/dist/css/bootstrap.min.css","aos/dist/aos.css":"node_modules/aos/dist/aos.css","./..\\fonts\\BalooPaaji2-Bold.ttf":[["BalooPaaji2-Bold.2c07b7d5.ttf","fonts/BalooPaaji2-Bold.ttf"],"fonts/BalooPaaji2-Bold.ttf"],"./..\\fonts\\BalooPaaji2-SemiBold.ttf":[["BalooPaaji2-SemiBold.6845e0a8.ttf","fonts/BalooPaaji2-SemiBold.ttf"],"fonts/BalooPaaji2-SemiBold.ttf"],"./..\\fonts\\BalooPaaji2-Regular.ttf":[["BalooPaaji2-Regular.096a06a5.ttf","fonts/BalooPaaji2-Regular.ttf"],"fonts/BalooPaaji2-Regular.ttf"],"_css_loader":"../../../../AppData/Roaming/npm-cache/_npx/27328/node_modules/parcel/src/builtins/css-loader.js"}],"../../../../AppData/Roaming/npm-cache/_npx/27328/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -296,7 +296,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51700" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55753" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -472,5 +472,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/24736/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../../../AppData/Roaming/npm-cache/_npx/27328/node_modules/parcel/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/style.251b6741.js.map
