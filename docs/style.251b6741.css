@@ -135,7 +135,7 @@ body {
   position: absolute;
   top: -40%;
   z-index: -1;
-  right: -9%;
+  right: -5%;
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg);
   height: 1300px;
