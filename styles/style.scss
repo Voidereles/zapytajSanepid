@@ -71,6 +71,7 @@ body {
 
     &-container {
         right: 0;
+        position: relative;
     }
 
     &::before {
@@ -87,9 +88,9 @@ body {
 
     &__svg {
         position: absolute;
-        top: -40%;
+        top: -500px;
         z-index: -1;
-        right: -5%;
+        right: -250px;
         transform: rotate(60deg);
         height: 1300px;
         width: 1300px;

@@ -117,6 +117,7 @@ body {
 
 .splash-top-right-container {
   right: 0;
+  position: relative;
 }
 
 .splash-top-right::before {
@@ -133,9 +134,9 @@ body {
 
 .splash-top-right__svg {
   position: absolute;
-  top: -40%;
+  top: -500px;
   z-index: -1;
-  right: -5%;
+  right: -250px;
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg);
   height: 1300px;
