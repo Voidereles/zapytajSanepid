@@ -1,16 +1,15 @@
-import 'bootstrap';
-import AOS from 'aos';
+// import 'bootstrap';
+// import AOS from 'aos';
 
 AOS.init({
-    duration: 500,
+    duration: 600,
     // easing: 'cubic-bezier(.91, .11, .19, .92)'
     // once: true
 });
 
 
 let a = 0;
-$(window).scroll(function () {
-
+$(window).on('scroll', function () {
     let counter = $('.counters');
     let oTop = counter.offset().top - window.innerHeight;
     if (a == 0 && $(window).scrollTop() > oTop) {
@@ -37,5 +36,30 @@ $(window).scroll(function () {
         });
         a = 1;
     }
-
 });
+
+
+$('.info__carousel').owlCarousel({
+    loop: true,
+    margin: 20,
+    responsiveClass: true,
+    responsive: {
+        0: {
+            items: 2,
+            // stagePadding: 30,
+            nav: false,
+            dots: false,
+        },
+        600: {
+            items: 3,
+            nav: false,
+            dots: false,
+            stagePadding: 0
+        },
+        1000: {
+            items: 4,
+            nav: false,
+            dots: false,
+        }
+    }
+})

@@ -1,5 +1,5 @@
-@import url('aos/dist/aos.css');
-@import url('bootstrap/dist/css/bootstrap.min.css');
+// @import url('aos/dist/aos.css');
+// @import url('bootstrap/dist/css/bootstrap.min.css');
 @import 'predefinied.scss';
 
 
@@ -69,11 +69,11 @@ body {
     &::before {
         border-radius: 50%;
         position: absolute;
-        width: 1000px;
-        height: 1000px;
+        width: 750px;
+        height: 750px;
         background: #f2f1e6;
-        top: -500px;
-        right: -500px;
+        top: -400px;
+        right: -550px;
         display: block;
         content: '';
     }
@@ -86,6 +86,10 @@ body {
         transform: rotate(60deg);
         height: 1300px;
         width: 1300px;
+
+        path {
+            fill: darken($color: $backgroundGrey, $amount: 3%);
+        }
     }
 }
 
@@ -362,6 +366,10 @@ body {
         color: white;
         position: relative;
         display: inline-block;
+        grid-column-start: 2;
+        width: 50%;
+        min-width: 150px;
+        margin-left: auto;
 
         span {
             position: relative;
@@ -393,6 +401,49 @@ body {
     }
 
 
+}
+
+.info {
+
+    &__heading {
+        color: $kongresLightBlue;
+        font-weight: 700;
+        font-size: $fontSizeH2;
+        max-width: 610px;
+    }
+
+    &__subheading {
+        font-weight: 600;
+        font-size: $fontSizeBodyL;
+        color: $kongresOrange;
+    }
+
+    &__owl-tip {
+        font-weight: 600;
+        color: $kongresLightBlue;
+        text-align: center;
+    }
+
+    &__carousel-item {
+        transition: $durationM;
+        display: block;
+        height: 100%;
+        width: 100%;
+
+        &:hover {
+            transform: scale(0.8);
+        }
+
+        svg {
+            min-width: 50px;
+            min-height: 50px;
+        }
+    }
+
+    &__owl-container {
+        // flex-grow: 2;
+        // max-width: 100%;
+    }
 }
 
 .cls-1 {
