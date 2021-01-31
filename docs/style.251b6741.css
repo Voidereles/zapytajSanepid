@@ -108,14 +108,25 @@ body {
   margin-bottom: 0.25rem;
 }
 
+.main {
+  overflow-x: hidden;
+  margin-top: -140px;
+  padding-top: 140px;
+  width: 100%;
+}
+
+.splash-top-right-container {
+  right: 0;
+}
+
 .splash-top-right::before {
   border-radius: 50%;
   position: absolute;
-  width: 750px;
-  height: 750px;
+  width: 950px;
+  height: 950px;
   background: #f2f1e6;
   top: -400px;
-  right: -550px;
+  right: -450px;
   display: block;
   content: '';
 }
@@ -124,7 +135,7 @@ body {
   position: absolute;
   top: -40%;
   z-index: -1;
-  right: -28%;
+  right: -9%;
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg);
   height: 1300px;
