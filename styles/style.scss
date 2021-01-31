@@ -1,6 +1,26 @@
-@import url('bootstrap/dist/css/bootstrap.min.css');
 @import url('aos/dist/aos.css');
+@import url('bootstrap/dist/css/bootstrap.min.css');
 @import 'predefinied.scss';
+
+
+
+body {
+    padding: 0;
+    margin: 0;
+    -webkit-user-drag: none;
+    -moz-user-drag: none;
+    -ms-user-drag: none;
+    -webkit-user-modify: none;
+    -moz-user-modify: none;
+    -ms-user-modify: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    font-family: 'BalooPaaji';
+    color: $kongresDark;
+    overflow-x: hidden;
+}
+
 
 .header {
     &__logo {
@@ -62,7 +82,7 @@
         position: absolute;
         top: -40%;
         z-index: -1;
-        right: -20%;
+        right: -28%;
         transform: rotate(60deg);
         height: 1300px;
         width: 1300px;
@@ -145,6 +165,8 @@
     &__item {
         background: $backgroundGrey;
         border-radius: 1rem;
+        padding: 1rem;
+        text-align: center;
     }
 
     &__icon-container {
@@ -159,7 +181,9 @@
     }
 
     &__icon {
-        padding: .5rem;
+        padding: 1rem;
+        max-width: 100%;
+        max-height: 100%;
     }
 
     &__text {
@@ -174,6 +198,201 @@
         font-size: $fontSizeH3;
         color: $kongresOrange;
     }
+}
+
+.about {
+    &__heading {
+        font-size: $fontSizeH1;
+        font-weight: 700;
+        margin: 3rem auto;
+        color: $kongresOrange;
+    }
+
+    &__subheading {
+
+        font-size: $fontSizeBodyL;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        color: $kongresLightBlue;
+    }
+
+    &__text {
+        font-weight: 600;
+    }
+
+
+    &__btn {
+        background-color: $kongresOrange;
+        border-radius: 100px;
+        font-weight: 700;
+        border: 2px solid $kongresOrange;
+        color: white;
+        position: relative;
+        display: inline-block;
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        &-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            left: -100%;
+            left: 0;
+            // transition: $durationM $cubicBezier;
+            transition: $durationM;
+            top: 0;
+            border-radius: 100px;
+            transform: scale(0);
+        }
+
+        &:hover {
+            color: $kongresOrange;
+
+            .hero__btn-bg {
+                left: 0;
+                transform: scale(1);
+            }
+        }
+    }
+
+}
+
+.how {
+    &__heading {
+        font-size: $fontSizeH1;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        color: $kongresLightBlue;
+    }
+
+    &__number {
+        height: 100px;
+        width: 100px;
+        font-size: $fontSizeH1;
+        color: $kongresOrange;
+        background: $backgroundGrey;
+        border-radius: 50%;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__step {
+        max-width: 280px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+
+        &--2 {
+            margin-top: 75px;
+        }
+
+        &--3 {
+            margin-top: 150px;
+        }
+    }
+}
+
+.asking {
+    &__heading {
+        font-size: $fontSizeH2;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        color: $kongresLightBlue;
+    }
+
+    &__subheading {
+        font-size: $fontSizeBodyL;
+        font-weight: 600;
+        margin: 2rem 0;
+        color: $kongresOrange;
+    }
+
+    &__p {
+        font-size: $fontSizeBodyXS;
+    }
+
+    &__tip {
+        font-weight: 600;
+        font-size: $fontSizeH3;
+        margin-bottom: 2rem;
+    }
+
+    &__arrow {
+        transform: rotate(270deg) translateX(-7px);
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        grid-auto-flow: dense;
+    }
+
+    &__input {
+        border-radius: 100px;
+        padding: 1rem 1.5rem;
+        background: $backgroundGrey;
+        font-weight: 600;
+        border: none;
+        outline: none;
+        box-shadow: none;
+
+        &:hover {
+
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+    }
+
+
+    &__btn {
+        background-color: $kongresOrange;
+        border-radius: 100px;
+        font-weight: 700;
+        border: 2px solid $kongresOrange;
+        color: white;
+        position: relative;
+        display: inline-block;
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        &-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            left: -100%;
+            left: 0;
+            // transition: $durationM $cubicBezier;
+            transition: $durationM;
+            top: 0;
+            border-radius: 100px;
+            transform: scale(0);
+        }
+
+        &:hover {
+            color: $kongresOrange;
+
+            .hero__btn-bg {
+                left: 0;
+                transform: scale(1);
+            }
+        }
+    }
+
+
 }
 
 .cls-1 {

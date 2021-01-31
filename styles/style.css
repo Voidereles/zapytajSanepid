@@ -1,5 +1,5 @@
-@import url("bootstrap/dist/css/bootstrap.min.css");
 @import url("aos/dist/aos.css");
+@import url("bootstrap/dist/css/bootstrap.min.css");
 @font-face {
   font-family: 'BalooPaaji';
   font-weight: 700;
@@ -16,27 +16,6 @@
   font-family: 'BalooPaaji';
   font-weight: 400;
   src: url("../fonts/BalooPaaji2-Regular.ttf");
-}
-
-.container-fluid {
-  max-width: 1700px;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  -webkit-user-drag: none;
-  -moz-user-drag: none;
-  -ms-user-drag: none;
-  -webkit-user-modify: none;
-  -moz-user-modify: none;
-  -ms-user-modify: none;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 400;
-  font-family: 'BalooPaaji';
-  color: #231f20;
-  overflow-x: hidden;
 }
 
 ::-moz-selection {
@@ -75,6 +54,23 @@ body {
 
 .cls-2 {
   fill: #2384ba;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  -webkit-user-modify: none;
+  -moz-user-modify: none;
+  -ms-user-modify: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-family: 'BalooPaaji';
+  color: #231f20;
+  overflow-x: hidden;
 }
 
 .header__logo-container {
@@ -130,7 +126,7 @@ body {
   position: absolute;
   top: -40%;
   z-index: -1;
-  right: -20%;
+  right: -28%;
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg);
   height: 1300px;
@@ -217,6 +213,8 @@ body {
 .counters__item {
   background: #f2f1e6;
   border-radius: 1rem;
+  padding: 1rem;
+  text-align: center;
 }
 
 .counters__icon-container {
@@ -237,7 +235,9 @@ body {
 }
 
 .counters__icon {
-  padding: .5rem;
+  padding: 1rem;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .counters__text {
@@ -251,6 +251,210 @@ body {
   font-weight: 700;
   font-size: 1.625rem;
   color: #f47826;
+}
+
+.about__heading {
+  font-size: 3.85rem;
+  font-weight: 700;
+  margin: 3rem auto;
+  color: #f47826;
+}
+
+.about__subheading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #2384ba;
+}
+
+.about__text {
+  font-weight: 600;
+}
+
+.about__btn {
+  background-color: #f47826;
+  border-radius: 100px;
+  font-weight: 700;
+  border: 2px solid #f47826;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.about__btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.about__btn-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  left: -100%;
+  left: 0;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  top: 0;
+  border-radius: 100px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.about__btn:hover {
+  color: #f47826;
+}
+
+.about__btn:hover .hero__btn-bg {
+  left: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.how__heading {
+  font-size: 3.85rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #2384ba;
+}
+
+.how__number {
+  height: 100px;
+  width: 100px;
+  font-size: 3.85rem;
+  color: #f47826;
+  background: #f2f1e6;
+  border-radius: 50%;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.how__step {
+  max-width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.how__step--2 {
+  margin-top: 75px;
+}
+
+.how__step--3 {
+  margin-top: 150px;
+}
+
+.asking__heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  color: #2384ba;
+}
+
+.asking__subheading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 2rem 0;
+  color: #f47826;
+}
+
+.asking__p {
+  font-size: 0.8rem;
+}
+
+.asking__tip {
+  font-weight: 600;
+  font-size: 1.625rem;
+  margin-bottom: 2rem;
+}
+
+.asking__arrow {
+  -webkit-transform: rotate(270deg) translateX(-7px);
+          transform: rotate(270deg) translateX(-7px);
+}
+
+.asking__form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  grid-auto-flow: dense;
+}
+
+.asking__input {
+  border-radius: 100px;
+  padding: 1rem 1.5rem;
+  background: #f2f1e6;
+  font-weight: 600;
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.asking__input:hover {
+  border: none;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.asking__btn {
+  background-color: #f47826;
+  border-radius: 100px;
+  font-weight: 700;
+  border: 2px solid #f47826;
+  color: white;
+  position: relative;
+  display: inline-block;
+}
+
+.asking__btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.asking__btn-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  left: -100%;
+  left: 0;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  top: 0;
+  border-radius: 100px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.asking__btn:hover {
+  color: #f47826;
+}
+
+.asking__btn:hover .hero__btn-bg {
+  left: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .cls-1 {

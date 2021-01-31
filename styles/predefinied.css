@@ -16,27 +16,6 @@
   src: url("../fonts/BalooPaaji2-Regular.ttf");
 }
 
-.container-fluid {
-  max-width: 1700px;
-}
-
-body {
-  padding: 0;
-  margin: 0;
-  -webkit-user-drag: none;
-  -moz-user-drag: none;
-  -ms-user-drag: none;
-  -webkit-user-modify: none;
-  -moz-user-modify: none;
-  -ms-user-modify: none;
-  -webkit-tap-highlight-color: transparent;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 400;
-  font-family: 'BalooPaaji';
-  color: #231f20;
-  overflow-x: hidden;
-}
-
 ::-moz-selection {
   background: #2384ba;
   color: white;
