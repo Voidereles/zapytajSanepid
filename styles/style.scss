@@ -1,0 +1,150 @@
+@import url('bootstrap/dist/css/bootstrap.min.css');
+@import url('aos/dist/aos.css');
+@import 'predefinied.scss';
+
+.header {
+    &__logo {
+        &-container {
+            max-height: 84px;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 50%;
+            max-width: 450px;
+
+            svg {
+                height: 84px;
+                width: auto;
+            }
+        }
+
+        &-sanepid,
+        &-kongres {
+            display: inline-flex;
+        }
+
+
+        &-kongres {
+            svg {
+                height: calc(84px - 2.5rem);
+            }
+        }
+
+        &-text {
+            font-size: $fontSizeBodyS;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.25rem;
+        }
+    }
+}
+
+// .main {
+//     overflow: hidden;
+// }
+
+.splash-top-right {
+
+
+    &::before {
+        border-radius: 50%;
+        position: absolute;
+        width: 1000px;
+        height: 1000px;
+        background: #f2f1e6;
+        top: -500px;
+        right: -500px;
+        display: block;
+        content: '';
+    }
+
+    &__svg {
+        position: absolute;
+        top: -40%;
+        z-index: -1;
+        right: -20%;
+        transform: rotate(60deg);
+        height: 1300px;
+        width: 1300px;
+    }
+}
+
+.hero {
+    &__heading {
+        font-weight: 700;
+        font-size: $fontSizeH1;
+        background: $kongresGradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: none;
+        margin: 0;
+
+        &::selection {
+            color: initial;
+            background: initial;
+        }
+    }
+
+    &__illustration {
+        max-height: 650px;
+        margin-top: -50px;
+        margin-right: -100px;
+    }
+
+    &__btn {
+        background-color: $kongresOrange;
+        border-radius: 100px;
+        font-weight: 700;
+        border: 2px solid $kongresOrange;
+        color: white;
+        position: relative;
+        display: block;
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        &-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: white;
+            left: -100%;
+            left: 0;
+            // transition: $durationM $cubicBezier;
+            transition: $durationM;
+            top: 0;
+            border-radius: 100px;
+            transform: scale(0);
+        }
+
+        &:hover {
+            color: $kongresOrange;
+
+            .hero__btn-bg {
+                left: 0;
+                transform: scale(1);
+            }
+        }
+    }
+
+    &__link {
+        color: $kongresDark;
+        font-weight: 700;
+        color: $kongresLightBlue;
+
+        &:hover {
+            color: $kongresDark;
+        }
+    }
+}
+
+.cls-1 {
+    fill: #231f20;
+}
+
+.cls-2 {
+    fill: #2384ba;
+}

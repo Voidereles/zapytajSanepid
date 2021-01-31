@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'BalooPaaji';
+  font-weight: 700;
+  src: url("../fonts/BalooPaaji2-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'BalooPaaji';
+  font-weight: 600;
+  src: url("../fonts/BalooPaaji2-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'BalooPaaji';
+  font-weight: 400;
+  src: url("../fonts/BalooPaaji2-Regular.ttf");
+}
+
+.container-fluid {
+  max-width: 1700px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  -webkit-user-modify: none;
+  -moz-user-modify: none;
+  -ms-user-modify: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-family: 'BalooPaaji';
+  color: #231f20;
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  background: #2384ba;
+  color: white;
+}
+
+::selection {
+  background: #2384ba;
+  color: white;
+}
+
+.container-fluid {
+  max-width: 1440px;
+}
+
+.color-dark {
+  color: #231f20;
+}
+
+.background-dark {
+  background: #231f20;
+}
+
+.color-dark-gradient {
+  background: #231f20;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.cls-1 {
+  fill: #231f20;
+}
+
+.cls-2 {
+  fill: #2384ba;
+}
+/*# sourceMappingURL=predefinied.css.map */

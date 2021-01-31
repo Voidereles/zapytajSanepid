@@ -1,0 +1,224 @@
+@import url("bootstrap/dist/css/bootstrap.min.css");
+@import url("aos/dist/aos.css");
+@font-face {
+  font-family: 'BalooPaaji';
+  font-weight: 700;
+  src: url("../fonts/BalooPaaji2-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'BalooPaaji';
+  font-weight: 600;
+  src: url("../fonts/BalooPaaji2-SemiBold.ttf");
+}
+
+@font-face {
+  font-family: 'BalooPaaji';
+  font-weight: 400;
+  src: url("../fonts/BalooPaaji2-Regular.ttf");
+}
+
+.container-fluid {
+  max-width: 1700px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  -webkit-user-modify: none;
+  -moz-user-modify: none;
+  -ms-user-modify: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 400;
+  font-family: 'BalooPaaji';
+  color: #231f20;
+  overflow-x: hidden;
+}
+
+::-moz-selection {
+  background: #2384ba;
+  color: white;
+}
+
+::selection {
+  background: #2384ba;
+  color: white;
+}
+
+.container-fluid {
+  max-width: 1440px;
+}
+
+.color-dark {
+  color: #231f20;
+}
+
+.background-dark {
+  background: #231f20;
+}
+
+.color-dark-gradient {
+  background: #231f20;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.cls-1 {
+  fill: #231f20;
+}
+
+.cls-2 {
+  fill: #2384ba;
+}
+
+.header__logo-container {
+  max-height: 84px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50%;
+  max-width: 450px;
+}
+
+.header__logo-container svg {
+  height: 84px;
+  width: auto;
+}
+
+.header__logo-sanepid, .header__logo-kongres {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.header__logo-kongres svg {
+  height: calc(84px - 2.5rem);
+}
+
+.header__logo-text {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.splash-top-right::before {
+  border-radius: 50%;
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  background: #f2f1e6;
+  top: -500px;
+  right: -500px;
+  display: block;
+  content: '';
+}
+
+.splash-top-right__svg {
+  position: absolute;
+  top: -40%;
+  z-index: -1;
+  right: -20%;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+  height: 1300px;
+  width: 1300px;
+}
+
+.hero__heading {
+  font-weight: 700;
+  font-size: 3.85rem;
+  background: linear-gradient(45deg, #2384ba 0%, #37a0cd 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  margin: 0;
+}
+
+.hero__heading::-moz-selection {
+  color: initial;
+  background: initial;
+}
+
+.hero__heading::selection {
+  color: initial;
+  background: initial;
+}
+
+.hero__illustration {
+  max-height: 650px;
+  margin-top: -50px;
+  margin-right: -100px;
+}
+
+.hero__btn {
+  background-color: #f47826;
+  border-radius: 100px;
+  font-weight: 700;
+  border: 2px solid #f47826;
+  color: white;
+  position: relative;
+  display: block;
+}
+
+.hero__btn span {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__btn-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: white;
+  left: -100%;
+  left: 0;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  top: 0;
+  border-radius: 100px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.hero__btn:hover {
+  color: #f47826;
+}
+
+.hero__btn:hover .hero__btn-bg {
+  left: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.hero__link {
+  color: #231f20;
+  font-weight: 700;
+  color: #2384ba;
+}
+
+.hero__link:hover {
+  color: #231f20;
+}
+
+.cls-1 {
+  fill: #231f20;
+}
+
+.cls-2 {
+  fill: #2384ba;
+}
+/*# sourceMappingURL=style.css.map */
