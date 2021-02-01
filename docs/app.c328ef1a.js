@@ -187,6 +187,21 @@ $(function () {
     }, 1000);
     e.preventDefault();
   });
+
+  if (window.innerWidth > 992) {
+    var allMoving = document.querySelectorAll(".onmousemove-element");
+    window.addEventListener("mousemove", function (e) {
+      Array.from(allMoving).forEach(function (element) {
+        // element.style.transitionDelay = "0.01s";
+        element.style.transitionDuration = "0.8s";
+        element.style.transform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
+        element.style.webkitTransform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
+        element.style.MozTransform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
+        element.style.msTransform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
+        element.style.OTransform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
+      });
+    });
+  }
 });
 },{}],"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -216,7 +231,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33919" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "39249" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

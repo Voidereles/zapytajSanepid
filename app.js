@@ -75,4 +75,25 @@ $(function () {
         }, 1000);
         e.preventDefault();
     })
+
+
+
+    if (window.innerWidth > 992) {
+
+        const allMoving = document.querySelectorAll(".onmousemove-element");
+
+        window.addEventListener("mousemove", (e) => {
+            Array.from(allMoving).forEach(element => {
+                // element.style.transitionDelay = "0.01s";
+                element.style.transitionDuration = "0.8s";
+                element.style.transform = "translateX(" + ((-e.clientX) / 40).toFixed(0) + "px)" + "translateY(" + ((-e.clientY) / 33).toFixed(0) + "px)";
+                element.style.webkitTransform = "translateX(" + ((-e.clientX) / 40).toFixed(0) + "px)" + "translateY(" + ((-e.clientY) / 33).toFixed(0) + "px)";
+                element.style.MozTransform = "translateX(" + ((-e.clientX) / 40).toFixed(0) + "px)" + "translateY(" + ((-e.clientY) / 33).toFixed(0) + "px)";
+                element.style.msTransform = "translateX(" + ((-e.clientX) / 40).toFixed(0) + "px)" + "translateY(" + ((-e.clientY) / 33).toFixed(0) + "px)";
+                element.style.OTransform = "translateX(" + ((-e.clientX) / 40).toFixed(0) + "px)" + "translateY(" + ((-e.clientY) / 33).toFixed(0) + "px)";
+            });
+        });
+
+
+    }
 });
