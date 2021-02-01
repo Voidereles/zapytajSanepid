@@ -164,12 +164,31 @@ body {
     }
 
     &__link {
-        color: $kongresDark;
         font-weight: 700;
         color: $kongresLightBlue;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            width: 100%;
+            content: '';
+            height: 2px;
+            border-radius: 100px;
+            background: $kongresLightBlue;
+            bottom: 0;
+            left: -100%;
+            // left: 0;
+            transition: $durationM;
+            position: absolute;
+        }
 
         &:hover {
-            color: $kongresDark;
+            color: $kongresLightBlue;
+            text-decoration: none;
+
+            &::before {
+                left: 0;
+            }
         }
     }
 }
@@ -439,6 +458,131 @@ body {
 
 }
 
+.help {
+    background: $kongresOrange;
+    padding: 3rem 0;
+    color: $backgroundGrey;
+
+    &__heading {
+        text-transform: uppercase;
+        font-weight: 700;
+        text-align: center;
+        font-size: $fontSizeH1;
+    }
+
+    &__small-heading {
+        font-weight: 600;
+        font-size: $fontSizeH3;
+    }
+
+    &__p {
+        font-size: $fontSizeBodyM;
+    }
+
+    &__subheading {
+        text-align: center;
+    }
+
+
+    &__link {
+        text-transform: uppercase;
+        font-size: $fontSizeBodyM;
+        color: $backgroundGrey;
+        text-align: center;
+        width: 100%;
+        max-width: 280px;
+
+
+
+        background-color: $backgroundGrey;
+        border-radius: 100px;
+        font-weight: 700;
+        border: 2px solid $backgroundGrey;
+        color: $kongresOrange;
+        position: relative;
+        display: block;
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        &-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: $kongresOrange;
+            left: -100%;
+            left: 0;
+            // transition: $durationM $cubicBezier;
+            transition: $durationM;
+            top: 0;
+            border-radius: 100px;
+            transform: scale(0);
+        }
+
+        &:hover {
+            color: $backgroundGrey;
+
+            .help__link-bg {
+                left: 0;
+                transform: scale(1);
+            }
+
+        }
+
+    }
+
+    &__donation-link {
+        text-transform: uppercase;
+        font-size: $fontSizeH3;
+        color: $backgroundGrey;
+        text-align: center;
+        width: 100%;
+        max-width: 200px;
+
+
+
+        background-color: $backgroundGrey;
+        border-radius: 100px;
+        font-weight: 700;
+        border: 2px solid $backgroundGrey;
+        color: $kongresOrange;
+        position: relative;
+        display: block;
+
+        span {
+            position: relative;
+            z-index: 2;
+        }
+
+        &-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: $kongresOrange;
+            left: -100%;
+            left: 0;
+            // transition: $durationM $cubicBezier;
+            transition: $durationM;
+            top: 0;
+            border-radius: 100px;
+            transform: scale(0);
+        }
+
+        &:hover {
+            color: $backgroundGrey;
+
+            .help__donation-link-bg {
+                left: 0;
+                transform: scale(1);
+            }
+
+        }
+
+    }
+}
+
 .info {
 
     &__heading {
@@ -475,9 +619,31 @@ body {
         }
     }
 
-    &__owl-container {
-        // flex-grow: 2;
-        // max-width: 100%;
+}
+
+.footer {
+    &__nav {
+        display: flex;
+    }
+
+    &__nav-item {
+        display: inline-block;
+    }
+
+    &__link {
+        color: $kongresDark;
+        transition: $durationM;
+        font-weight: 600;
+
+        &:hover {
+            color: $kongresLightBlue;
+            text-decoration: none;
+        }
+
+        &:active,
+        &:focus {
+            color: $kongresDark;
+        }
     }
 }
 
@@ -489,7 +655,102 @@ body {
     fill: $kongresLightBlue;
 }
 
+.asking .cls-1 {
+    fill: $kongresDark;
+}
+
+.asking .cls-2 {
+    fill: #fb9390;
+}
+
+.asking .cls-3 {
+    // fill: $kongresLightBlue;
+
+    fill: lighten($color: $kongresDarkGrey, $amount: 7%);
+
+}
+
+.asking .cls-4 {
+    fill: $kongresDarkGrey;
+}
+
+.asking .cls-5 {
+    fill: #f8caa4;
+}
+
+.asking .cls-6 {
+    fill: $kongresOrange;
+}
+
+.asking .cls-7 {
+    fill: #fff;
+}
+
+.asking .cls-8 {
+    fill: #ef7f7f;
+}
+
+.asking .cls-9 {
+    fill: #ffae73;
+}
+
+.hero .cls-1 {
+    fill: #f47826;
+}
+
+.hero .cls-3 {
+    fill:
+        #fff;
+}
+
+.hero .cls-4 {
+    fill:
+        #fb9390;
+}
+
+.hero .cls-5 {
+    fill:
+        #e8605d;
+}
+
+.hero .cls-6 {
+    fill:
+        #ef7f7f;
+}
+
+.hero .cls-7 {
+    fill:
+        #f7a491;
+}
+
+.hero .cls-8 {
+    fill: #58595B;
+}
+
+.hero .cls-9 {
+    fill:
+        #f47458;
+}
+
+.hero .cls-10 {
+    fill:
+        $kongresDark;
+}
+
+.hero .cls-11 {
+    fill: darken($color: $kongresLightBlue, $amount: 15%);
+}
+
 @media (max-width:992px) {
+
+    .header {
+        &__logo-container {
+
+            max-width: 400px;
+            width: 100%;
+        }
+    }
+
     .splash-top-right {
         &::before {
             display: none;
@@ -557,6 +818,7 @@ body {
     .header {
         &__logo-container {
             width: 100%;
+
 
         }
 

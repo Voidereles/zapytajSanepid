@@ -46,6 +46,17 @@
   text-shadow: none;
 }
 
+.btn.focus,
+.btn:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn.btn-link:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .cls-1 {
   fill: #231f20;
 }
@@ -218,13 +229,32 @@ body {
 }
 
 .hero__link {
-  color: #231f20;
   font-weight: 700;
   color: #2384ba;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__link::before {
+  width: 100%;
+  content: '';
+  height: 2px;
+  border-radius: 100px;
+  background: #2384ba;
+  bottom: 0;
+  left: -100%;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  position: absolute;
 }
 
 .hero__link:hover {
-  color: #231f20;
+  color: #2384ba;
+  text-decoration: none;
+}
+
+.hero__link:hover::before {
+  left: 0;
 }
 
 .counters__item {
@@ -505,6 +535,124 @@ body {
           transform: scale(1);
 }
 
+.help {
+  background: #f47826;
+  padding: 3rem 0;
+  color: #f2f1e6;
+}
+
+.help__heading {
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  font-size: 3.85rem;
+}
+
+.help__small-heading {
+  font-weight: 600;
+  font-size: 1.625rem;
+}
+
+.help__p {
+  font-size: 1.125rem;
+}
+
+.help__subheading {
+  text-align: center;
+}
+
+.help__link {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  color: #f2f1e6;
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+  background-color: #f2f1e6;
+  border-radius: 100px;
+  font-weight: 700;
+  border: 2px solid #f2f1e6;
+  color: #f47826;
+  position: relative;
+  display: block;
+}
+
+.help__link span {
+  position: relative;
+  z-index: 2;
+}
+
+.help__link-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f47826;
+  left: -100%;
+  left: 0;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  top: 0;
+  border-radius: 100px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.help__link:hover {
+  color: #f2f1e6;
+}
+
+.help__link:hover .help__link-bg {
+  left: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.help__donation-link {
+  text-transform: uppercase;
+  font-size: 1.625rem;
+  color: #f2f1e6;
+  text-align: center;
+  width: 100%;
+  max-width: 200px;
+  background-color: #f2f1e6;
+  border-radius: 100px;
+  font-weight: 700;
+  border: 2px solid #f2f1e6;
+  color: #f47826;
+  position: relative;
+  display: block;
+}
+
+.help__donation-link span {
+  position: relative;
+  z-index: 2;
+}
+
+.help__donation-link-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #f47826;
+  left: -100%;
+  left: 0;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  top: 0;
+  border-radius: 100px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.help__donation-link:hover {
+  color: #f2f1e6;
+}
+
+.help__donation-link:hover .help__donation-link-bg {
+  left: 0;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .info__heading {
   color: #2384ba;
   font-weight: 700;
@@ -541,6 +689,32 @@ body {
   min-height: 50px;
 }
 
+.footer__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__nav-item {
+  display: inline-block;
+}
+
+.footer__link {
+  color: #231f20;
+  -webkit-transition: 400ms;
+  transition: 400ms;
+  font-weight: 600;
+}
+
+.footer__link:hover {
+  color: #2384ba;
+  text-decoration: none;
+}
+
+.footer__link:active, .footer__link:focus {
+  color: #231f20;
+}
+
 .cls-1 {
   fill: #231f20;
 }
@@ -549,7 +723,87 @@ body {
   fill: #2384ba;
 }
 
+.asking .cls-1 {
+  fill: #231f20;
+}
+
+.asking .cls-2 {
+  fill: #fb9390;
+}
+
+.asking .cls-3 {
+  fill: #6a6b6d;
+}
+
+.asking .cls-4 {
+  fill: #58595B;
+}
+
+.asking .cls-5 {
+  fill: #f8caa4;
+}
+
+.asking .cls-6 {
+  fill: #f47826;
+}
+
+.asking .cls-7 {
+  fill: #fff;
+}
+
+.asking .cls-8 {
+  fill: #ef7f7f;
+}
+
+.asking .cls-9 {
+  fill: #ffae73;
+}
+
+.hero .cls-1 {
+  fill: #f47826;
+}
+
+.hero .cls-3 {
+  fill: #fff;
+}
+
+.hero .cls-4 {
+  fill: #fb9390;
+}
+
+.hero .cls-5 {
+  fill: #e8605d;
+}
+
+.hero .cls-6 {
+  fill: #ef7f7f;
+}
+
+.hero .cls-7 {
+  fill: #f7a491;
+}
+
+.hero .cls-8 {
+  fill: #58595B;
+}
+
+.hero .cls-9 {
+  fill: #f47458;
+}
+
+.hero .cls-10 {
+  fill: #231f20;
+}
+
+.hero .cls-11 {
+  fill: #17567a;
+}
+
 @media (max-width: 992px) {
+  .header__logo-container {
+    max-width: 400px;
+    width: 100%;
+  }
   .splash-top-right::before {
     display: none;
   }

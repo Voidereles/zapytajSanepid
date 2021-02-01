@@ -23,7 +23,7 @@ $kongresDark: #231f20;
 $kongresOrange: #f47826;
 $kongresLightBlue: #2384ba;
 $kongresBlueForGradient: #37a0cd;
-
+$kongresDarkGrey:#58595B;
 $kongresGradient: linear-gradient(45deg, rgba(35, 132, 186, 1) 0%, rgba(55, 160, 205, 1) 100%);
 
 
@@ -72,6 +72,15 @@ $durationXL: 800ms;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: none;
+}
+
+.btn.focus,
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn.btn-link:focus {
+    box-shadow: none;
 }
 
 .cls-1 {
