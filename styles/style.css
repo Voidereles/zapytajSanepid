@@ -125,7 +125,7 @@ body {
   position: absolute;
   width: 950px;
   height: 950px;
-  background: #f2f1e6;
+  background: #edebdc;
   top: -400px;
   right: -450px;
   display: block;
@@ -134,9 +134,9 @@ body {
 
 .splash-top-right__svg {
   position: absolute;
-  top: -500px;
+  top: -580px;
   z-index: -1;
-  right: -250px;
+  right: -330px;
   -webkit-transform: rotate(60deg);
           transform: rotate(60deg);
   height: 1300px;
@@ -150,11 +150,7 @@ body {
 .hero__heading {
   font-weight: 700;
   font-size: 3.85rem;
-  background: linear-gradient(45deg, #2384ba 0%, #37a0cd 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: none;
+  color: #2384ba;
   margin: 0;
 }
 
@@ -232,7 +228,7 @@ body {
 }
 
 .counters__icon-container {
-  background: linear-gradient(45deg, #2384ba 0%, #37a0cd 100%);
+  background: #2384ba;
   border-radius: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -246,6 +242,8 @@ body {
   width: 70px;
   height: 70px;
   margin: auto;
+  position: relative;
+  top: -45px;
 }
 
 .counters__icon {
@@ -255,7 +253,7 @@ body {
 }
 
 .counters__text {
-  margin-top: 1rem;
+  margin-top: -25px;
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -397,6 +395,7 @@ body {
   font-weight: 600;
   font-size: 1.625rem;
   margin-bottom: 2rem;
+  color: #2384ba;
 }
 
 .asking__arrow {
@@ -486,13 +485,12 @@ body {
 .info__subheading {
   font-weight: 600;
   font-size: 1.25rem;
-  color: #f47826;
+  color: #231f20;
 }
 
 .info__owl-tip {
   font-weight: 600;
   color: #2384ba;
-  text-align: center;
 }
 
 .info__carousel-item {

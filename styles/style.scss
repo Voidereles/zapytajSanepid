@@ -79,7 +79,7 @@ body {
         position: absolute;
         width: 950px;
         height: 950px;
-        background: #f2f1e6;
+        background: darken($color: $backgroundGrey, $amount: 3%);
         top: -400px;
         right: -450px;
         display: block;
@@ -88,9 +88,9 @@ body {
 
     &__svg {
         position: absolute;
-        top: -500px;
+        top: -580px;
         z-index: -1;
-        right: -250px;
+        right: -330px;
         transform: rotate(60deg);
         height: 1300px;
         width: 1300px;
@@ -105,11 +105,7 @@ body {
     &__heading {
         font-weight: 700;
         font-size: $fontSizeH1;
-        background: $kongresGradient;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        text-shadow: none;
+        color: $kongresLightBlue;
         margin: 0;
 
         &::selection {
@@ -182,7 +178,7 @@ body {
     }
 
     &__icon-container {
-        background: $kongresGradient;
+        background: $kongresLightBlue;
         border-radius: 50%;
         display: flex;
         justify-content: center;
@@ -190,6 +186,8 @@ body {
         width: 70px;
         height: 70px;
         margin: auto;
+        position: relative;
+        top: -45px;
     }
 
     &__icon {
@@ -199,10 +197,11 @@ body {
     }
 
     &__text {
-        margin-top: 1rem;
+        margin-top: -25px;
         font-size: $fontSizeBodyS;
         font-weight: 600;
         text-transform: uppercase;
+
     }
 
     &__number {
@@ -335,6 +334,7 @@ body {
         font-weight: 600;
         font-size: $fontSizeH3;
         margin-bottom: 2rem;
+        color: $kongresLightBlue;
     }
 
     &__arrow {
@@ -423,13 +423,12 @@ body {
     &__subheading {
         font-weight: 600;
         font-size: $fontSizeBodyL;
-        color: $kongresOrange;
+        color: $kongresDark;
     }
 
     &__owl-tip {
         font-weight: 600;
         color: $kongresLightBlue;
-        text-align: center;
     }
 
     &__carousel-item {
