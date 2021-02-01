@@ -321,7 +321,7 @@ body {
         width: 160px;
         position: absolute;
         transform: scaleX(-1);
-        left: -200px;
+        left: -70px;
 
         &::before {
             content: '';
@@ -502,18 +502,14 @@ body {
         }
     }
 
-    .header {
-        &__logo-container {
-            width: 100%;
 
-        }
 
-        &__logo-container svg {
-            height: 64px;
-        }
-
-        &__logo-kongres svg {
-            height: calc(74px - 2.5rem);
+    .hero {
+        &__illustration {
+            max-height: 260px;
+            margin-top: -20px;
+            margin-right: initial;
+            margin-bottom: 20px;
         }
     }
 
@@ -530,13 +526,60 @@ body {
     }
 
     .asking {
-        &__form {
-            display: flex;
-            flex-direction: column;
+        &__subheading {
+            margin: 1rem 0;
+        }
+
+        &__heading {
+            margin-bottom: 1rem;
         }
 
         &__input {
             margin-bottom: 0rem;
+        }
+
+        &__person-container svg {
+            display: none;
+        }
+    }
+}
+
+@media (min-width:481px) and (max-width:992px) {
+    .splash-top-right__svg {
+        top: 60px;
+        right: -200px;
+        width: 700px;
+        transform: rotate(185deg) scaleX(-1);
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        &__logo-container {
+            width: 100%;
+
+        }
+
+        &__logo-container svg {
+            height: 64px;
+        }
+
+        &__logo-kongres svg {
+            height: calc(74px - 2.5rem);
+        }
+    }
+
+    .hero {
+        &__illustration {
+            max-width: 30vh;
+        }
+    }
+
+    .asking {
+
+        &__form {
+            display: flex;
+            flex-direction: column;
         }
     }
 }
