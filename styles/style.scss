@@ -23,6 +23,9 @@ body {
 
 
 .header {
+    position: relative;
+    z-index: 10;
+
     &__logo {
         &-container {
             max-height: 84px;
@@ -55,6 +58,7 @@ body {
             font-weight: 600;
             text-transform: uppercase;
             margin-bottom: 0.25rem;
+            text-align: center;
         }
     }
 }
@@ -80,15 +84,16 @@ body {
         width: 950px;
         height: 950px;
         background: darken($color: $backgroundGrey, $amount: 3%);
-        top: -400px;
+        top: -700px;
         right: -450px;
         display: block;
         content: '';
+        display: none;
     }
 
     &__svg {
         position: absolute;
-        top: -580px;
+        top: -700px;
         z-index: -1;
         right: -330px;
         transform: rotate(60deg);
@@ -312,6 +317,29 @@ body {
 }
 
 .asking {
+    &__person-container {
+        width: 160px;
+        position: absolute;
+        transform: scaleX(-1);
+        left: -200px;
+
+        &::before {
+            content: '';
+            background-image: url('../images/SVG/splash-bottom.svg');
+
+            position: absolute;
+            top: -89px;
+            left: -113px;
+            width: 740px;
+            height: 552px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            z-index: -1;
+            transform: rotate(224deg);
+        }
+
+    }
+
     &__heading {
         font-size: $fontSizeH2;
         font-weight: 700;
@@ -459,4 +487,56 @@ body {
 
 .cls-2 {
     fill: $kongresLightBlue;
+}
+
+@media (max-width:992px) {
+    .splash-top-right {
+        &::before {
+            display: none;
+        }
+
+        &__svg {
+            top: -230px;
+            right: -140px;
+            transform: rotate(46deg);
+        }
+    }
+
+    .header {
+        &__logo-container {
+            width: 100%;
+
+        }
+
+        &__logo-container svg {
+            height: 64px;
+        }
+
+        &__logo-kongres svg {
+            height: calc(74px - 2.5rem);
+        }
+    }
+
+    .how {
+        &__steps {
+            flex-direction: column;
+        }
+
+        &__step {
+            width: 100%;
+            max-width: 100%;
+            margin-top: 1rem;
+        }
+    }
+
+    .asking {
+        &__form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__input {
+            margin-bottom: 0rem;
+        }
+    }
 }

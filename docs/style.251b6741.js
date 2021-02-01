@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../fonts/BalooPaaji2-Bold.ttf":[["BalooPaaji2-Bold.2c07b7d5.ttf","fonts/BalooPaaji2-Bold.ttf"],"fonts/BalooPaaji2-Bold.ttf"],"./../fonts/BalooPaaji2-SemiBold.ttf":[["BalooPaaji2-SemiBold.6845e0a8.ttf","fonts/BalooPaaji2-SemiBold.ttf"],"fonts/BalooPaaji2-SemiBold.ttf"],"./../fonts/BalooPaaji2-Regular.ttf":[["BalooPaaji2-Regular.096a06a5.ttf","fonts/BalooPaaji2-Regular.ttf"],"fonts/BalooPaaji2-Regular.ttf"],"_css_loader":"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../fonts/BalooPaaji2-Bold.ttf":[["BalooPaaji2-Bold.2c07b7d5.ttf","fonts/BalooPaaji2-Bold.ttf"],"fonts/BalooPaaji2-Bold.ttf"],"./../fonts/BalooPaaji2-SemiBold.ttf":[["BalooPaaji2-SemiBold.6845e0a8.ttf","fonts/BalooPaaji2-SemiBold.ttf"],"fonts/BalooPaaji2-SemiBold.ttf"],"./../fonts/BalooPaaji2-Regular.ttf":[["BalooPaaji2-Regular.096a06a5.ttf","fonts/BalooPaaji2-Regular.ttf"],"fonts/BalooPaaji2-Regular.ttf"],"./../images/SVG/splash-bottom.svg":[["splash-bottom.235a28de.svg","images/SVG/splash-bottom.svg"],"images/SVG/splash-bottom.svg"],"_css_loader":"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36125" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42583" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

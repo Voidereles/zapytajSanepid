@@ -71,6 +71,11 @@ body {
   overflow-x: hidden;
 }
 
+.header {
+  position: relative;
+  z-index: 10;
+}
+
 .header__logo-container {
   max-height: 84px;
   display: -webkit-inline-box;
@@ -106,6 +111,7 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 .main {
@@ -126,15 +132,16 @@ body {
   width: 950px;
   height: 950px;
   background: #edebdc;
-  top: -400px;
+  top: -700px;
   right: -450px;
   display: block;
   content: '';
+  display: none;
 }
 
 .splash-top-right__svg {
   position: absolute;
-  top: -580px;
+  top: -700px;
   z-index: -1;
   right: -330px;
   -webkit-transform: rotate(60deg);
@@ -373,6 +380,29 @@ body {
   margin-top: 150px;
 }
 
+.asking__person-container {
+  width: 160px;
+  position: absolute;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  left: -200px;
+}
+
+.asking__person-container::before {
+  content: '';
+  background-image: url("../images/SVG/splash-bottom.svg");
+  position: absolute;
+  top: -89px;
+  left: -113px;
+  width: 740px;
+  height: 552px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  -webkit-transform: rotate(224deg);
+          transform: rotate(224deg);
+}
+
 .asking__heading {
   font-size: 2rem;
   font-weight: 700;
@@ -517,5 +547,49 @@ body {
 
 .cls-2 {
   fill: #2384ba;
+}
+
+@media (max-width: 992px) {
+  .splash-top-right::before {
+    display: none;
+  }
+  .splash-top-right__svg {
+    top: -230px;
+    right: -140px;
+    -webkit-transform: rotate(46deg);
+            transform: rotate(46deg);
+  }
+  .header__logo-container {
+    width: 100%;
+  }
+  .header__logo-container svg {
+    height: 64px;
+  }
+  .header__logo-kongres svg {
+    height: calc(74px - 2.5rem);
+  }
+  .how__steps {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .how__step {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+  .asking__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .asking__input {
+    margin-bottom: 0rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
