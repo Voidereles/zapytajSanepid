@@ -985,6 +985,12 @@ body {
   .asking__person-container svg {
     display: none;
   }
+  .asking__person-container::before {
+    top: -151px;
+    left: -113px;
+    width: 780px;
+    height: 602px;
+  }
   .help__desktop-borders {
     border: none;
   }

@@ -932,7 +932,15 @@ body {
         &__person-container svg {
             display: none;
         }
+
+        &__person-container::before {
+            top: -151px;
+            left: -113px;
+            width: 780px;
+            height: 602px;
+        }
     }
+
 
     .help {
         &__desktop-borders {
@@ -1041,6 +1049,8 @@ body {
         right: -200px;
         width: 700px;
         transform: rotate(185deg) scaleX(-1);
+
+
     }
 }
 
