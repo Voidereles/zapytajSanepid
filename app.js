@@ -1,5 +1,6 @@
-// import 'bootstrap';
-// import AOS from 'aos';
+import 'bootstrap';
+import AOS from 'aos';
+import 'owl.carousel';
 
 AOS.init({
     duration: 600,

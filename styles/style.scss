@@ -1,5 +1,7 @@
-// @import url('aos/dist/aos.css');
-// @import url('bootstrap/dist/css/bootstrap.min.css');
+@import url('aos/dist/aos.css');
+@import url('bootstrap/dist/css/bootstrap.min.css');
+@import url('owl.carousel/dist/assets/owl.carousel.css');
+
 @import 'predefinied.scss';
 
 
@@ -380,9 +382,67 @@ body {
             margin-top: 150px;
         }
     }
+
+    &__border-dots {
+        border-image-slice: 33% 33%;
+        border-style: dotted;
+        border-color: $backgroundGrey;
+        border-width: 10.8px;
+        border-image-repeat: round;
+        position: absolute;
+        top: -20px;
+        left: 20.5%;
+        border-top-right-radius: 500px;
+        width: 25%;
+        height: 261px;
+        border-bottom: none;
+        border-left: none;
+        z-index: -1;
+        transform: rotate(-29deg) !important;
+
+        &--2 {
+            left: initial;
+            right: 21.5%;
+            top: calc(42px + 42px + 4px);
+            transform: rotate(40deg) scaleY(-1) !important;
+            height: 171px;
+        }
+    }
 }
 
 .asking {
+    &__lamp {
+        top: -80px;
+        left: 50px;
+        position: absolute;
+
+        .ray {
+            animation: ray .25s infinite alternate-reverse linear;
+
+            &--2 {
+                animation: ray2 .25s infinite alternate-reverse linear;
+            }
+        }
+    }
+
+    &__decoration {
+        position: absolute;
+        top: -52px;
+        left: -55px;
+        transforM: rotate(56deg);
+
+        &--container {
+            z-index: 3;
+        }
+
+        &--2 {
+            position: absolute;
+            top: 88px;
+            left: -125px;
+            transforM: rotate(165deg);
+        }
+    }
+
     &__person-container {
         width: 160px;
         position: absolute;
@@ -394,7 +454,7 @@ body {
             background-image: url('../images/SVG/splash-bottom.svg');
 
             position: absolute;
-            top: -89px;
+            top: 79px;
             left: -113px;
             width: 740px;
             height: 552px;
@@ -833,9 +893,9 @@ body {
     .hero {
         &__illustration {
             max-height: 260px;
-            margin-top: -20px;
+            margin-top: 1rem;
             margin-right: initial;
-            margin-bottom: 20px;
+            margin-bottom: 1rem;
         }
     }
 
@@ -846,8 +906,13 @@ body {
 
         &__step {
             width: 100%;
-            max-width: 100%;
+            max-width: 500px;
+            margin: auto;
             margin-top: 1rem;
+        }
+
+        &__border-dots {
+            display: none;
         }
     }
 
