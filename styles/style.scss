@@ -123,6 +123,22 @@ body {
         max-height: 650px;
         margin-top: -50px;
         margin-right: -100px;
+
+        .dot {
+            opacity: 0;
+            animation: fading 1.5s alternate-reverse infinite;
+
+            &--2 {
+                animation-delay: 1.5s;
+                animation: fading2 1.5s alternate-reverse infinite;
+            }
+
+
+            &--3 {
+                animation-delay: 3s;
+                animation: fading3 1.5s alternate-reverse infinite;
+            }
+        }
     }
 
     &__btn {
@@ -469,6 +485,14 @@ body {
         text-align: center;
     }
 
+    &__desktop-borders {
+        border: none;
+        border-left: 1px solid $backgroundGrey;
+        border-right: 1px solid $backgroundGrey;
+    }
+
+
+
     &__heading {
         text-transform: uppercase;
         font-weight: 600;
@@ -812,6 +836,65 @@ body {
         &__person-container svg {
             display: none;
         }
+    }
+
+    .help {
+        &__mobile-borders {
+            border: none;
+            border-top: 1px solid $backgroundGrey;
+            border-bottom: 1px solid $backgroundGrey;
+        }
+    }
+}
+
+@keyframes fading {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fading2 {
+    25% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fading3 {
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 
