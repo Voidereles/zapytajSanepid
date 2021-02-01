@@ -567,14 +567,22 @@ body {
 }
 
 .help {
-    background: $kongresOrange;
-    padding: 3rem 0;
-    color: $backgroundGrey;
+    // background: $kongresOrange;
+    // padding: 3rem 0;
+    // color: $backgroundGrey;
 
     &__container {
-        // background: $backgroundGrey;
-        // border-radius: 1rem;
         text-align: center;
+        background: $backgroundGrey;
+        border-radius: 1rem;
+        padding: 3rem;
+        color: $kongresDark;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: calc(2rem + 30px) 3rem 2rem 3rem !important;
     }
 
     &__desktop-borders {
@@ -583,25 +591,43 @@ body {
         border-right: 1px solid $backgroundGrey;
     }
 
-
-
     &__heading {
+        // text-transform: uppercase;
+        // font-weight: 600;
+        // text-align: center;
+        // font-size: $fontSizeH1;
+        // display: inline-block;
+        // border-radius: 100px;
+        // // background: $kongresLightBlue;
+        // color: white;
+        // // transform: translateY(-40px);
+        // // padding: 0.75rem;
+        // // width: 100%;
+        // // max-width: 200px;
+        // margin: auto;
         text-transform: uppercase;
         font-weight: 600;
         text-align: center;
-        font-size: $fontSizeH1;
+        font-size: 3.85rem;
         display: inline-block;
         border-radius: 100px;
-        // background: $kongresLightBlue;
         color: white;
-        // transform: translateY(-40px);
-        // padding: 0.75rem;
-        // width: 100%;
-        // max-width: 200px;
         margin: auto;
+        background: $kongresLightBlue;
+        padding: 0.75rem 2rem;
+        font-size: 2rem !important;
+        transform: translateY(-60px) translateX(-50%);
+        height: 60px;
+        width: fit-content;
+        position: absolute;
+        top: 30px;
+        left: 50%;
+
+
 
         &--small {
-            font-size: $fontSizeBodyM;
+            font-size: $fontSizeBodyL !important;
+            line-height: 2;
         }
     }
 
@@ -616,30 +642,81 @@ body {
 
     &__subheading,
     &__p {
+        // text-align: center;
+        // max-width: 500px;
+        // margin: auto;
+        // margin-top: 0.75rem;
+
         text-align: center;
         max-width: 500px;
-        margin: auto;
-        margin-top: 0.75rem;
+        /* margin: auto; */
+        /* margin-top: 0.75rem; */
+        /* margin-top: -40px; */
+        margin: 0 !important;
     }
 
+    // &__link {
+    //     text-transform: uppercase;
+    //     font-size: $fontSizeBodyM;
+    //     color: $backgroundGrey;
+    //     text-align: center;
+    //     width: 100%;
+    //     max-width: 280px;
+
+
+
+    //     background-color: $backgroundGrey;
+    //     border-radius: 100px;
+    //     font-weight: 700;
+    //     border: 2px solid $kongresOrange;
+    //     color: $kongresOrange;
+    //     position: relative;
+    //     display: block;
+
+    //     span {
+    //         position: relative;
+    //         z-index: 2;
+    //     }
+
+    //     &-bg {
+    //         position: absolute;
+    //         background: $kongresOrange;
+    //         transition: $durationM;
+    //         border-radius: 100px;
+    //         transform: scale(0);
+    //         width: calc(100% - 2px);
+    //         left: 1px;
+    //         top: 1px;
+    //         height: calc(100% - 2px);
+    //     }
+
+    //     &:hover {
+    //         color: $backgroundGrey;
+
+    //         .help__link-bg {
+    //             transform: scale(1);
+    //         }
+
+    //     }
+
+    // }
 
     &__link {
         text-transform: uppercase;
-        font-size: $fontSizeBodyM;
-        color: $backgroundGrey;
+        font-size: 1.125rem;
+        color: #f2f1e6;
         text-align: center;
         width: 100%;
         max-width: 280px;
-
-
-
-        background-color: $backgroundGrey;
+        background-color: #f2f1e6;
         border-radius: 100px;
         font-weight: 700;
-        border: 2px solid $kongresOrange;
-        color: $kongresOrange;
+        border: 2px solid #f47826;
+        color: #f47826;
         position: relative;
         display: block;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
 
         span {
             position: relative;
@@ -666,26 +743,70 @@ body {
             }
 
         }
-
     }
+
+    // &__donation-link {
+    //     text-transform: uppercase;
+    //     font-size: $fontSizeH3;
+    //     color: $backgroundGrey;
+    //     text-align: center;
+    //     width: 100%;
+    //     max-width: 200px;
+
+
+
+    //     background-color: $backgroundGrey;
+    //     border-radius: 100px;
+    //     font-weight: 700;
+    //     border: 2px solid $kongresOrange;
+    //     color: $kongresOrange;
+    //     position: relative;
+    //     display: block;
+
+    //     span {
+    //         position: relative;
+    //         z-index: 2;
+    //     }
+
+    //     &-bg {
+    //         position: absolute;
+    //         background: $kongresOrange;
+    //         transition: $durationM;
+    //         border-radius: 100px;
+    //         transform: scale(0);
+    //         width: calc(100% - 2px);
+    //         left: 1px;
+    //         top: 1px;
+    //         height: calc(100% - 2px);
+    //     }
+
+    //     &:hover {
+    //         color: $backgroundGrey;
+
+    //         .help__donation-link-bg {
+    //             transform: scale(1);
+    //         }
+
+    //     }
+
+    // }
+
 
     &__donation-link {
         text-transform: uppercase;
-        font-size: $fontSizeH3;
-        color: $backgroundGrey;
+        font-size: 1.625rem;
+        color: #f2f1e6;
         text-align: center;
         width: 100%;
         max-width: 200px;
-
-
-
-        background-color: $backgroundGrey;
+        background-color: #f2f1e6;
         border-radius: 100px;
         font-weight: 700;
-        border: 2px solid $kongresOrange;
-        color: $kongresOrange;
+        border: 2px solid #f47826;
+        color: #f47826;
         position: relative;
         display: block;
+        margin: 0 !important;
 
         span {
             position: relative;
@@ -712,8 +833,9 @@ body {
             }
 
         }
-
     }
+
+
 }
 
 .info {
@@ -954,6 +1076,8 @@ body {
             border-bottom: 1px solid $backgroundGrey;
         }
     }
+
+
 }
 
 @keyframes fading {
