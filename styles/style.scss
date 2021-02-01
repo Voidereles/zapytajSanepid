@@ -126,17 +126,48 @@ body {
 
         .dot {
             opacity: 0;
-            animation: fading 1.5s alternate-reverse infinite;
+            animation: fading 1.5s alternate-reverse infinite linear;
 
             &--2 {
                 animation-delay: 1.5s;
-                animation: fading2 1.5s alternate-reverse infinite;
+                animation: fading2 1.5s alternate-reverse infinite linear;
             }
 
 
             &--3 {
                 animation-delay: 3s;
-                animation: fading3 1.5s alternate-reverse infinite;
+                animation: fading3 1.5s alternate-reverse infinite linear;
+            }
+        }
+
+        .gear {
+            animation: rotate 4s infinite linear;
+            transform-origin: center;
+            transform-box: fill-box;
+
+            &--2 {
+                animation: rotate 4s infinite reverse linear;
+                animation-delay: 0.667s;
+            }
+        }
+
+        .ray {
+            animation: ray .5s infinite alternate-reverse linear;
+
+            &--2 {
+                animation: ray2 .5s infinite alternate-reverse linear;
+            }
+        }
+
+        .clock-part {
+            animation: rotate 5s infinite linear;
+            transform-origin: 2px 10px;
+            transform-box: fill-box;
+
+            &--2 {
+                transform-origin: 8px 12px;
+                transform-box: fill-box;
+                animation: rotate 20s infinite linear;
             }
         }
     }
@@ -839,6 +870,10 @@ body {
     }
 
     .help {
+        &__desktop-borders {
+            border: none;
+        }
+
         &__mobile-borders {
             border: none;
             border-top: 1px solid $backgroundGrey;
@@ -897,6 +932,43 @@ body {
         opacity: 0;
     }
 }
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ray {
+    from {
+        transform: scaleX(1) scaleY(1) rotate(0deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: scaleY(1.0022) scaleX(1.0022) rotate(0.1deg);
+        opacity: 0.625;
+    }
+}
+
+@keyframes ray2 {
+    from {
+        transform: scaleX(1.0032) scaleY(1.0032) rotate(0.1deg);
+        opacity: 0.625;
+
+    }
+
+    to {
+        transform: scaleX(1) scaleY(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+
 
 @media (min-width:481px) and (max-width:992px) {
     .splash-top-right__svg {

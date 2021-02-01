@@ -42,6 +42,9 @@ $(window).on('scroll', function () {
 $('.info__carousel').owlCarousel({
     loop: true,
     margin: 20,
+    autoplay: true,
+    autoplayHoverPause: false,
+    autoplayTimeout: 3000,
     responsiveClass: true,
     responsive: {
         0: {
@@ -63,3 +66,13 @@ $('.info__carousel').owlCarousel({
         }
     }
 })
+
+$(function () {
+    $("a[href*='#']:not([href='#])").on('click', function (e) {
+        let target = $(this).attr("href");
+        $('html,body').stop().animate({
+            scrollTop: $(target).offset().top - 60
+        }, 1000);
+        e.preventDefault();
+    })
+});
