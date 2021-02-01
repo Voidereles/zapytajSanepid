@@ -46,6 +46,10 @@
   text-shadow: none;
 }
 
+.margin-100-top {
+  margin-top: 6.5rem;
+}
+
 .btn.focus,
 .btn:focus {
   -webkit-box-shadow: none;
@@ -541,11 +545,23 @@ body {
   color: #f2f1e6;
 }
 
+.help__container {
+  text-align: center;
+}
+
 .help__heading {
   text-transform: uppercase;
-  font-weight: 700;
+  font-weight: 600;
   text-align: center;
   font-size: 3.85rem;
+  display: inline-block;
+  border-radius: 100px;
+  color: white;
+  margin: auto;
+}
+
+.help__heading--small {
+  font-size: 1.125rem;
 }
 
 .help__small-heading {
@@ -557,8 +573,11 @@ body {
   font-size: 1.125rem;
 }
 
-.help__subheading {
+.help__subheading, .help__p {
   text-align: center;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 0.75rem;
 }
 
 .help__link {
@@ -571,7 +590,7 @@ body {
   background-color: #f2f1e6;
   border-radius: 100px;
   font-weight: 700;
-  border: 2px solid #f2f1e6;
+  border: 2px solid #f47826;
   color: #f47826;
   position: relative;
   display: block;
@@ -584,17 +603,16 @@ body {
 
 .help__link-bg {
   position: absolute;
-  width: 100%;
-  height: 100%;
   background: #f47826;
-  left: -100%;
-  left: 0;
   -webkit-transition: 400ms;
   transition: 400ms;
-  top: 0;
   border-radius: 100px;
   -webkit-transform: scale(0);
           transform: scale(0);
+  width: calc(100% - 2px);
+  left: 1px;
+  top: 1px;
+  height: calc(100% - 2px);
 }
 
 .help__link:hover {
@@ -602,7 +620,6 @@ body {
 }
 
 .help__link:hover .help__link-bg {
-  left: 0;
   -webkit-transform: scale(1);
           transform: scale(1);
 }
@@ -617,7 +634,7 @@ body {
   background-color: #f2f1e6;
   border-radius: 100px;
   font-weight: 700;
-  border: 2px solid #f2f1e6;
+  border: 2px solid #f47826;
   color: #f47826;
   position: relative;
   display: block;
@@ -630,17 +647,16 @@ body {
 
 .help__donation-link-bg {
   position: absolute;
-  width: 100%;
-  height: 100%;
   background: #f47826;
-  left: -100%;
-  left: 0;
   -webkit-transition: 400ms;
   transition: 400ms;
-  top: 0;
   border-radius: 100px;
   -webkit-transform: scale(0);
           transform: scale(0);
+  width: calc(100% - 2px);
+  left: 1px;
+  top: 1px;
+  height: calc(100% - 2px);
 }
 
 .help__donation-link:hover {
@@ -648,7 +664,6 @@ body {
 }
 
 .help__donation-link:hover .help__donation-link-bg {
-  left: 0;
   -webkit-transform: scale(1);
           transform: scale(1);
 }

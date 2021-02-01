@@ -463,11 +463,30 @@ body {
     padding: 3rem 0;
     color: $backgroundGrey;
 
+    &__container {
+        // background: $backgroundGrey;
+        // border-radius: 1rem;
+        text-align: center;
+    }
+
     &__heading {
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 600;
         text-align: center;
         font-size: $fontSizeH1;
+        display: inline-block;
+        border-radius: 100px;
+        // background: $kongresLightBlue;
+        color: white;
+        // transform: translateY(-40px);
+        // padding: 0.75rem;
+        // width: 100%;
+        // max-width: 200px;
+        margin: auto;
+
+        &--small {
+            font-size: $fontSizeBodyM;
+        }
     }
 
     &__small-heading {
@@ -479,8 +498,12 @@ body {
         font-size: $fontSizeBodyM;
     }
 
-    &__subheading {
+    &__subheading,
+    &__p {
         text-align: center;
+        max-width: 500px;
+        margin: auto;
+        margin-top: 0.75rem;
     }
 
 
@@ -497,7 +520,7 @@ body {
         background-color: $backgroundGrey;
         border-radius: 100px;
         font-weight: 700;
-        border: 2px solid $backgroundGrey;
+        border: 2px solid $kongresOrange;
         color: $kongresOrange;
         position: relative;
         display: block;
@@ -509,23 +532,20 @@ body {
 
         &-bg {
             position: absolute;
-            width: 100%;
-            height: 100%;
             background: $kongresOrange;
-            left: -100%;
-            left: 0;
-            // transition: $durationM $cubicBezier;
             transition: $durationM;
-            top: 0;
             border-radius: 100px;
             transform: scale(0);
+            width: calc(100% - 2px);
+            left: 1px;
+            top: 1px;
+            height: calc(100% - 2px);
         }
 
         &:hover {
             color: $backgroundGrey;
 
             .help__link-bg {
-                left: 0;
                 transform: scale(1);
             }
 
@@ -546,7 +566,7 @@ body {
         background-color: $backgroundGrey;
         border-radius: 100px;
         font-weight: 700;
-        border: 2px solid $backgroundGrey;
+        border: 2px solid $kongresOrange;
         color: $kongresOrange;
         position: relative;
         display: block;
@@ -558,23 +578,20 @@ body {
 
         &-bg {
             position: absolute;
-            width: 100%;
-            height: 100%;
             background: $kongresOrange;
-            left: -100%;
-            left: 0;
-            // transition: $durationM $cubicBezier;
             transition: $durationM;
-            top: 0;
             border-radius: 100px;
             transform: scale(0);
+            width: calc(100% - 2px);
+            left: 1px;
+            top: 1px;
+            height: calc(100% - 2px);
         }
 
         &:hover {
             color: $backgroundGrey;
 
             .help__donation-link-bg {
-                left: 0;
                 transform: scale(1);
             }
 
@@ -699,28 +716,23 @@ body {
 }
 
 .hero .cls-3 {
-    fill:
-        #fff;
+    fill: #fff;
 }
 
 .hero .cls-4 {
-    fill:
-        #fb9390;
+    fill: #fb9390;
 }
 
 .hero .cls-5 {
-    fill:
-        #e8605d;
+    fill: #e8605d;
 }
 
 .hero .cls-6 {
-    fill:
-        #ef7f7f;
+    fill: #ef7f7f;
 }
 
 .hero .cls-7 {
-    fill:
-        #f7a491;
+    fill: #f7a491;
 }
 
 .hero .cls-8 {
@@ -728,13 +740,11 @@ body {
 }
 
 .hero .cls-9 {
-    fill:
-        #f47458;
+    fill: #f47458;
 }
 
 .hero .cls-10 {
-    fill:
-        $kongresDark;
+    fill: $kongresDark;
 }
 
 .hero .cls-11 {
