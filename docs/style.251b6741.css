@@ -252,6 +252,10 @@
   margin-top: 6.5rem;
 }
 
+a:focus, a:active {
+  text-decoration: none;
+}
+
 .btn.focus,
 .btn:focus {
   -webkit-box-shadow: none;

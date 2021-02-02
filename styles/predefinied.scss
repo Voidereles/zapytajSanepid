@@ -86,6 +86,14 @@ $durationXL: 800ms;
     margin-top: 6.5rem;
 }
 
+a {
+
+    &:focus,
+    &:active {
+        text-decoration: none;
+    }
+}
+
 .btn.focus,
 .btn:focus {
     box-shadow: none;
