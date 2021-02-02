@@ -331,6 +331,10 @@ body {
   text-align: center;
 }
 
+.subpage__nav-item {
+  display: block;
+}
+
 .main {
   overflow-x: hidden;
   margin-top: -140px;

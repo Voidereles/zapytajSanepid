@@ -65,6 +65,12 @@ body {
     }
 }
 
+.subpage {
+    &__nav-item {
+        display: block;
+    }
+}
+
 .main {
     overflow-x: hidden;
     margin-top: -140px;
