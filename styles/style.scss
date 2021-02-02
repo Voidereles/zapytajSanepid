@@ -1075,6 +1075,14 @@ body {
             border-top: 1px solid $backgroundGrey;
             border-bottom: 1px solid $backgroundGrey;
         }
+
+        &__container {
+            padding: 2rem 2rem 1rem 2rem !important
+        }
+
+        &__link {
+            font-size: $fontSizeBodyS;
+        }
     }
 
 
@@ -1197,6 +1205,10 @@ body {
     }
 
     .hero {
+        &__heading {
+            font-size: 3.5rem;
+        }
+
         &__illustration {
             max-width: 30vh;
         }

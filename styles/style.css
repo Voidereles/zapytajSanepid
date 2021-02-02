@@ -37,6 +37,14 @@
   color: #231f20;
 }
 
+.color-blue {
+  color: #2384ba;
+}
+
+.color-orange {
+  color: #f47826;
+}
+
 .background-dark {
   background: #231f20;
 }
@@ -1030,6 +1038,12 @@ body {
     border-top: 1px solid #f2f1e6;
     border-bottom: 1px solid #f2f1e6;
   }
+  .help__container {
+    padding: 2rem 2rem 1rem 2rem !important;
+  }
+  .help__link {
+    font-size: 1rem;
+  }
 }
 
 @-webkit-keyframes fading {
@@ -1209,6 +1223,9 @@ body {
   }
   .header__logo-kongres svg {
     height: calc(74px - 2.5rem);
+  }
+  .hero__heading {
+    font-size: 3.5rem;
   }
   .hero__illustration {
     max-width: 30vh;
