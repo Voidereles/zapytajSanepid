@@ -1088,6 +1088,11 @@ body {
         &__link {
             font-size: $fontSizeBodyS;
         }
+
+
+        &__heading {
+            width: calc(100% - 8rem);
+        }
     }
 
 
