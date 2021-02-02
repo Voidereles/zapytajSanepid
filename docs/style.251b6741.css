@@ -908,9 +908,6 @@ body {
   -webkit-transform: translateY(-60px) translateX(-50%);
           transform: translateY(-60px) translateX(-50%);
   height: 60px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   position: absolute;
   top: 30px;
   left: 50%;
