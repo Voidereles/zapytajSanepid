@@ -72,7 +72,6 @@ body {
 }
 
 .main {
-    overflow-x: hidden;
     margin-top: -140px;
     padding-top: 140px;
     width: 100%;
@@ -858,6 +857,7 @@ body {
 
         &:hover {
             color: $kongresLightBlue;
+            text-decoration: none;
         }
     }
 
@@ -883,6 +883,7 @@ body {
             .news__more {
                 opacity: 1;
                 margin-top: -0.5rem;
+                padding-bottom: 0.5rem;
             }
 
             .news__item-content {
@@ -913,6 +914,33 @@ body {
                 border: none;
             }
         }
+    }
+}
+
+.news-list {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1.5rem;
+        grid-auto-flow: dense;
+
+
+
+        // .news__item {
+
+        //     &:hover {
+        //         .news__item-content {
+        //             transform: none;
+        //             opacity: 1;
+        //         }
+
+        //         // .news__more {
+        //         //     opacity: 1;
+        //         //     margin-top: -0.5rem;
+        //         //     padding-bottom: 0.5rem;
+        //         // }
+        //     }
+        // }
     }
 }
 

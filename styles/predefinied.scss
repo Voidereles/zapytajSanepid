@@ -167,10 +167,20 @@ a {
     width: 100% !important;
 }
 
+.columns-2 {
+    columns: 2;
+}
+
 table a {
     color: $kongresLightBlue;
 
     &:hover {
         color: $kongresLightBlue;
+    }
+}
+
+@media (max-width:992px) {
+    .columns-2 {
+        columns: 1;
     }
 }
