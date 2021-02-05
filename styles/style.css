@@ -883,6 +883,84 @@ body {
           transform: scale(1);
 }
 
+.news__heading {
+  color: #f47826;
+  font-weight: 700;
+}
+
+.news__all {
+  color: #2384ba;
+}
+
+.news__all svg path {
+  filL: #2384ba;
+}
+
+.news__all:hover {
+  color: #2384ba;
+}
+
+.news__more {
+  opacity: 0;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  place-content: center;
+  text-align: center;
+}
+
+.news__item {
+  color: #231f20;
+  display: block;
+}
+
+.news__item-content {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.news__item:hover {
+  color: #231f20;
+  text-decoration: none;
+}
+
+.news__item:hover .news__more {
+  opacity: 1;
+  margin-top: -0.5rem;
+}
+
+.news__item:hover .news__item-content {
+  -webkit-transform: scale(0.97) translateY(0.5rem);
+          transform: scale(0.97) translateY(0.5rem);
+}
+
+.news .owl-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.news .owl-dots .owl-dot {
+  background: #2384ba;
+  border-radius: 50%;
+  margin: 0 0.5rem;
+  width: 18px;
+  height: 18px;
+}
+
+.news .owl-dots .owl-dot.active {
+  background: #f47826;
+}
+
+.news .owl-dots .owl-dot:focus, .news .owl-dots .owl-dot:active {
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+}
+
 .info__heading {
   color: #2384ba;
   font-weight: 700;

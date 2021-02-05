@@ -73,6 +73,37 @@ infoCarousel.owlCarousel({
 })
 
 
+
+const newsCarousel = $('.news__carousel');
+newsCarousel.owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsiveClass: true,
+    dots: true,
+    responsive: {
+        0: {
+            items: 1,
+            nav: false,
+            dots: true,
+            autoplayTimeout: 3000,
+        },
+        600: {
+            items: 2,
+            nav: false,
+            dots: true,
+            autoplayTimeout: 5000,
+        },
+        1000: {
+            items: 3,
+            nav: false,
+            dots: true
+        }
+    }
+})
+
+
 $(function () {
     $("a[href*='#']:not([href='#])").on('click', function (e) {
         let target = $(this).attr("href");

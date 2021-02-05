@@ -21793,6 +21793,34 @@ infoCarousel.owlCarousel({
   } // autoplay: false
 
 });
+var newsCarousel = $('.news__carousel');
+newsCarousel.owlCarousel({
+  loop: true,
+  margin: 20,
+  autoplay: true,
+  autoplayHoverPause: true,
+  responsiveClass: true,
+  dots: true,
+  responsive: {
+    0: {
+      items: 1,
+      nav: false,
+      dots: true,
+      autoplayTimeout: 3000
+    },
+    600: {
+      items: 2,
+      nav: false,
+      dots: true,
+      autoplayTimeout: 5000
+    },
+    1000: {
+      items: 3,
+      nav: false,
+      dots: true
+    }
+  }
+});
 $(function () {
   $("a[href*='#']:not([href='#])").on('click', function (e) {
     var target = $(this).attr("href");
@@ -21845,7 +21873,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "35263" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "42919" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

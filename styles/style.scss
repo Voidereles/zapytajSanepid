@@ -843,6 +843,79 @@ body {
 
 }
 
+.news {
+    &__heading {
+        color: $kongresOrange;
+        font-weight: 700;
+    }
+
+    &__all {
+        color: $kongresLightBlue;
+
+        svg path {
+            filL: $kongresLightBlue;
+        }
+
+        &:hover {
+            color: $kongresLightBlue;
+        }
+    }
+
+    &__more {
+        opacity: 0;
+        transition: $durationS;
+        place-content: center;
+        text-align: center;
+    }
+
+    &__item {
+        color: $kongresDark;
+        display: block;
+
+        &-content {
+            transition: $durationS;
+        }
+
+        &:hover {
+            color: $kongresDark;
+            text-decoration: none;
+
+            .news__more {
+                opacity: 1;
+                margin-top: -0.5rem;
+            }
+
+            .news__item-content {
+                transform: scale(0.97) translateY(0.5rem);
+            }
+        }
+    }
+
+    .owl-dots {
+        display: flex;
+        justify-content: center;
+
+        .owl-dot {
+            background: $kongresLightBlue;
+            border-radius: 50%;
+            margin: 0 0.5rem;
+            width: 18px;
+            height: 18px;
+
+            &.active {
+                background: $kongresOrange;
+            }
+
+            &:focus,
+            &:active {
+                outline: none;
+                box-shadow: none;
+                border: none;
+            }
+        }
+    }
+}
+
 .info {
 
     &__heading {
