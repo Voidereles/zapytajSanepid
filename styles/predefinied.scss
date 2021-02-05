@@ -103,10 +103,74 @@ a {
     box-shadow: none;
 }
 
+.btn-success {
+
+    &.active,
+    &.focus,
+    &.hover,
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $kongresOrange;
+        border-color: $kongresOrange;
+    }
+
+    &:not(:disabled):not(.disabled).active:focus,
+    &:not(:disabled):not(.disabled):active:focus,
+    .show>&.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem #f4782688;
+    }
+}
+
+.btn-info {
+
+    &.active,
+    &.focus,
+    &.hover,
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $kongresLightBlue;
+        border-color: $kongresLightBlue;
+        ;
+    }
+
+    &:not(:disabled):not(.disabled).active:focus,
+    &:not(:disabled):not(.disabled):active:focus,
+    .show>&.dropdown-toggle:focus {
+        box-shadow: 0 0 0 0.2rem #2385ba7c;
+    }
+}
+
+.page-link {
+    color: $kongresLightBlue;
+}
+
+.page-item.active .page-link {
+    background-color: $kongresLightBlue;
+    border-color: $kongresLightBlue;
+}
+
 .cls-1 {
     fill: #231f20;
 }
 
 .cls-2 {
     fill: #2384ba;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+.iti {
+    width: 100% !important;
+}
+
+table a {
+    color: $kongresLightBlue;
+
+    &:hover {
+        color: $kongresLightBlue;
+    }
 }

@@ -76,12 +76,59 @@ a:focus, a:active {
           box-shadow: none;
 }
 
+.btn-success.active, .btn-success.focus, .btn-success.hover, .btn-success:hover, .btn-success:focus, .btn-success:active {
+  background-color: #f47826;
+  border-color: #f47826;
+}
+
+.btn-success:not(:disabled):not(.disabled).active:focus, .btn-success:not(:disabled):not(.disabled):active:focus,
+.show > .btn-success.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #f4782688;
+          box-shadow: 0 0 0 0.2rem #f4782688;
+}
+
+.btn-info.active, .btn-info.focus, .btn-info.hover, .btn-info:hover, .btn-info:focus, .btn-info:active {
+  background-color: #2384ba;
+  border-color: #2384ba;
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus, .btn-info:not(:disabled):not(.disabled):active:focus,
+.show > .btn-info.dropdown-toggle:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem #2385ba7c;
+          box-shadow: 0 0 0 0.2rem #2385ba7c;
+}
+
+.page-link {
+  color: #2384ba;
+}
+
+.page-item.active .page-link {
+  background-color: #2384ba;
+  border-color: #2384ba;
+}
+
 .cls-1 {
   fill: #231f20;
 }
 
 .cls-2 {
   fill: #2384ba;
+}
+
+.invalid-feedback {
+  display: block;
+}
+
+.iti {
+  width: 100% !important;
+}
+
+table a {
+  color: #2384ba;
+}
+
+table a:hover {
+  color: #2384ba;
 }
 
 body {
