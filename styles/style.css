@@ -1,3 +1,6 @@
+@import url("aos/dist/aos.css");
+@import url("bootstrap/dist/css/bootstrap.min.css");
+@import url("owl.carousel/dist/assets/owl.carousel.css");
 @font-face {
   font-family: 'BalooPaaji';
   font-weight: 700;
