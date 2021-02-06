@@ -21853,16 +21853,17 @@ $(function () {
       });
     });
   }
-});
-$(document).ready(function ($) {
-  $(window).bind("load resize", function () {
-    setTimeout(function () {
-      var container_width = $('#fb-container').width();
-      $('#fb-container').html('<div class="fb-page" ' + 'data-href="https://www.facebook.com/cloverepublic/"' + ' data-width="' + container_width + '" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/IniciativaAutoMat"><a href="https://www.facebook.com/cloverepublic/">Clove Republic</a></blockquote></div></div>');
-      FB.XFBML.parse();
-    }, 100);
-  });
-});
+}); // $(document).ready(function ($) {
+//     $(window).bind("load resize", function () {
+//         setTimeout(function () {
+//             var container_width = $('#fb-container').width();
+//             $('#fb-container').html('<div class="fb-page" ' +
+//                 'data-href="https://www.facebook.com/cloverepublic/"' +
+//                 ' data-width="' + container_width + '" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/IniciativaAutoMat"><a href="https://www.facebook.com/cloverepublic/">Clove Republic</a></blockquote></div></div>');
+//             FB.XFBML.parse();
+//         }, 100);
+//     });
+// });
 },{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","aos":"node_modules/aos/dist/aos.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js"}],"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -21891,7 +21892,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "41153" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38161" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
