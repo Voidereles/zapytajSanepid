@@ -104,6 +104,8 @@ a {
 }
 
 .btn-success {
+    background-color: $kongresOrange;
+    border-color: $kongresOrange;
 
     &.active,
     &.focus,
@@ -123,6 +125,8 @@ a {
 }
 
 .btn-info {
+    background-color: $kongresLightBlue;
+    border-color: $kongresLightBlue;
 
     &.active,
     &.focus,
@@ -132,7 +136,7 @@ a {
     &:active {
         background-color: $kongresLightBlue;
         border-color: $kongresLightBlue;
-        ;
+
     }
 
     &:not(:disabled):not(.disabled).active:focus,

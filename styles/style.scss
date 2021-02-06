@@ -21,6 +21,7 @@ body {
     font-family: 'BalooPaaji';
     color: $kongresDark;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 
@@ -75,6 +76,7 @@ body {
     margin-top: -140px;
     padding-top: 140px;
     width: 100%;
+    overflow-x: hidden;
 
 }
 
@@ -345,6 +347,124 @@ body {
                 left: 0;
                 transform: scale(1);
             }
+        }
+    }
+
+    &__social-container {
+        background: white;
+        border-radius: 8px;
+        border: 3px solid $kongresOrange;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__social {
+        height: 350px;
+        border-radius: 16px;
+        overflow-y: scroll;
+
+        &-container {
+            .nav-item {
+
+                display: inline-flex;
+            }
+        }
+
+        &-link {
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            font-size: $fontSizeH3;
+            color: #231f20;
+            border-top-left-radius: 0rem;
+            border-top-right-radius: 0.4rem;
+            font-weight: 400;
+            padding: 0.5rem 0;
+            transform: translateX(0) translateY(-1px);
+
+            &:hover {
+                text-decoration: none;
+                color: $kongresLightBlue;
+            }
+
+
+            // &::before {
+            //     content: '';
+            //     position: absolute;
+            //     top: -3px;
+            //     right: -3px;                
+            //     border-top-right-radius: 0px;
+            //     width: calc(100% + 4px);
+            //     height: calc(100% + 4px);
+
+            // }
+
+            &--facebook::before {
+                content: '';
+                position: absolute;
+                top: -3px;
+                left: -3px;
+                border-top: 4px solid white;
+                border-left: 4px solid white;
+                border-right: 3px solid $kongresOrange;
+                border-bottom: 3px solid $kongresOrange;
+                border-bottom-right-radius: 1rem;
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                opacity: 1;
+                transition: $durationS;
+
+            }
+
+            &--twitter::before {
+                content: '';
+                position: absolute;
+                top: -3px;
+                right: -3px;
+                border-top: 4px solid white;
+                border-left: 3px solid $kongresOrange;
+                border-right: 4px solid white;
+                border-bottom: 3px solid $kongresOrange;
+                border-bottom-left-radius: 1rem;
+                width: calc(100% + 4px);
+                height: calc(100% + 4px);
+                opacity: 1;
+                transition: $durationS;
+            }
+
+
+
+            &.active {
+                color: $kongresOrange;
+
+
+                &::before {
+                    opacity: 0;
+                }
+
+
+            }
+        }
+
+        .tab-content {
+            background: #f1f1f1;
+        }
+
+        &::-webkit-scrollbar {
+            width: 10px;
+            border-radius: 1rem;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 0.25rem;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-bottom-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
         }
     }
 

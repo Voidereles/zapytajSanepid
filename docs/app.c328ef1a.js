@@ -21794,6 +21794,15 @@ infoCarousel.owlCarousel({
 
 });
 var newsCarousel = $('.news__carousel');
+jQuery(document).ready(function ($) {
+  $(window).bind("load resize", function () {
+    setTimeout(function () {
+      var container_width = $('#fb-container').width();
+      $('#fb-container').html('<div class="fb-page" ' + 'data-href="https://www.facebook.com/cloverepublic/"' + ' data-width="' + container_width + '" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/IniciativaAutoMat"><a href="https://www.facebook.com/cloverepublic/">Clove Republic</a></blockquote></div></div>');
+      FB.XFBML.parse();
+    }, 100);
+  });
+});
 newsCarousel.owlCarousel({
   loop: true,
   margin: 20,
@@ -21822,7 +21831,7 @@ newsCarousel.owlCarousel({
   }
 });
 $(function () {
-  $("a[href*='#']:not([href='#])").on('click', function (e) {
+  $("a[href*='#'].btn:not([href='#])").on('click', function (e) {
     var target = $(this).attr("href");
     $('html,body').stop().animate({
       scrollTop: $(target).offset().top - 60
@@ -21844,6 +21853,15 @@ $(function () {
       });
     });
   }
+});
+$(document).ready(function ($) {
+  $(window).bind("load resize", function () {
+    setTimeout(function () {
+      var container_width = $('#fb-container').width();
+      $('#fb-container').html('<div class="fb-page" ' + 'data-href="https://www.facebook.com/cloverepublic/"' + ' data-width="' + container_width + '" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/IniciativaAutoMat"><a href="https://www.facebook.com/cloverepublic/">Clove Republic</a></blockquote></div></div>');
+      FB.XFBML.parse();
+    }, 100);
+  });
 });
 },{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","aos":"node_modules/aos/dist/aos.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js"}],"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -21873,7 +21891,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34687" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44835" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

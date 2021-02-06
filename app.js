@@ -75,6 +75,18 @@ infoCarousel.owlCarousel({
 
 
 const newsCarousel = $('.news__carousel');
+
+jQuery(document).ready(function ($) {
+    $(window).bind("load resize", function () {
+        setTimeout(function () {
+            var container_width = $('#fb-container').width();
+            $('#fb-container').html('<div class="fb-page" ' +
+                'data-href="https://www.facebook.com/cloverepublic/"' +
+                ' data-width="' + container_width + '" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/IniciativaAutoMat"><a href="https://www.facebook.com/cloverepublic/">Clove Republic</a></blockquote></div></div>');
+            FB.XFBML.parse();
+        }, 100);
+    });
+});
 newsCarousel.owlCarousel({
     loop: true,
     margin: 20,
@@ -105,7 +117,7 @@ newsCarousel.owlCarousel({
 
 
 $(function () {
-    $("a[href*='#']:not([href='#])").on('click', function (e) {
+    $("a[href*='#'].btn:not([href='#])").on('click', function (e) {
         let target = $(this).attr("href");
         $('html,body').stop().animate({
             scrollTop: $(target).offset().top - 60
@@ -133,4 +145,17 @@ $(function () {
 
 
     }
+});
+
+
+$(document).ready(function ($) {
+    $(window).bind("load resize", function () {
+        setTimeout(function () {
+            var container_width = $('#fb-container').width();
+            $('#fb-container').html('<div class="fb-page" ' +
+                'data-href="https://www.facebook.com/cloverepublic/"' +
+                ' data-width="' + container_width + '" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/IniciativaAutoMat"><a href="https://www.facebook.com/cloverepublic/">Clove Republic</a></blockquote></div></div>');
+            FB.XFBML.parse();
+        }, 100);
+    });
 });
