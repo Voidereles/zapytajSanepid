@@ -659,6 +659,12 @@ body {
   font-weight: 600;
 }
 
+.about__p--highlighted {
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: #2384ba;
+}
+
 .about__btn {
   background-color: #f47826;
   border-radius: 100px;

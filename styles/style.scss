@@ -311,6 +311,13 @@ body {
         font-weight: 600;
     }
 
+    &__p {
+        &--highlighted {
+            font-weight: 600;
+            font-size: $fontSizeBodyL;
+            color: $kongresLightBlue;
+        }
+    }
 
     &__btn {
         background-color: $kongresOrange;
