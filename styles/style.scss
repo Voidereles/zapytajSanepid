@@ -360,8 +360,8 @@ body {
 
     &__social-container {
         background: white;
-        border-radius: 8px;
-        border: 1px solid $kongresOrange;
+        // border-radius: 8px;
+        // border: 1px solid $kongresOrange;
         padding: 0;
         margin: 0;
     }
@@ -383,13 +383,11 @@ body {
             justify-content: center;
             align-items: center;
             width: 100%;
-            font-size: $fontSizeH3;
-            color: #231f20;
-            border-top-left-radius: 0rem;
-            border-top-right-radius: 0.4rem;
-            font-weight: 400;
+            font-size: $fontSizeBodyL;
+            color: $kongresDarkGrey;
             padding: 0.5rem 0;
             transform: translateX(0) translateY(-1px);
+            font-weight: 700;
 
             &:hover {
                 text-decoration: none;
@@ -408,38 +406,38 @@ body {
 
             // }
 
-            &--facebook::before {
-                content: '';
-                position: absolute;
-                top: -1px;
-                left: -1px;
-                border-top: 4px solid white;
-                border-left: 4px solid white;
-                border-right: 1px solid $kongresOrange;
-                border-bottom: 1px solid $kongresOrange;
-                border-bottom-right-radius: 1rem;
-                width: calc(100% + 4px);
-                height: calc(100% + 4px);
-                opacity: 1;
-                transition: $durationS;
+            // &--facebook::before {
+            //     content: '';
+            //     position: absolute;
+            //     top: -1px;
+            //     left: -1px;
+            //     border-top: 4px solid white;
+            //     border-left: 4px solid white;
+            //     border-right: 1px solid $kongresOrange;
+            //     border-bottom: 1px solid $kongresOrange;
+            //     border-bottom-right-radius: 1rem;
+            //     width: calc(100% + 4px);
+            //     height: calc(100% + 4px);
+            //     opacity: 1;
+            //     transition: $durationS;
 
-            }
+            // }
 
-            &--twitter::before {
-                content: '';
-                position: absolute;
-                top: -1px;
-                right: -1px;
-                border-top: 4px solid white;
-                border-left: 1px solid $kongresOrange;
-                border-right: 4px solid white;
-                border-bottom: 1px solid $kongresOrange;
-                border-bottom-left-radius: 1rem;
-                width: calc(100% + 4px);
-                height: calc(100% + 4px);
-                opacity: 1;
-                transition: $durationS;
-            }
+            // &--twitter::before {
+            //     content: '';
+            //     position: absolute;
+            //     top: -1px;
+            //     right: -1px;
+            //     border-top: 4px solid white;
+            //     border-left: 1px solid $kongresOrange;
+            //     border-right: 4px solid white;
+            //     border-bottom: 1px solid $kongresOrange;
+            //     border-bottom-left-radius: 1rem;
+            //     width: calc(100% + 4px);
+            //     height: calc(100% + 4px);
+            //     opacity: 1;
+            //     transition: $durationS;
+            // }
 
 
 
@@ -448,7 +446,20 @@ body {
 
 
                 &::before {
-                    opacity: 0;
+                    // opacity: 0;
+
+
+                    content: '';
+                    position: absolute;
+                    bottom: -1px;
+                    right: 0;
+                    border-bottom: 4px solid #f47826;
+                    border-radius: 1rem;
+                    width: calc(100% + 4px);
+                    height: 0.25rem;
+                    opacity: 1;
+                    transition: $durationS;
+                    background: #f47826;
                 }
 
 
@@ -465,7 +476,7 @@ body {
         }
 
         &::-webkit-scrollbar-thumb {
-            background: #888;
+            background: $kongresOrange;
             border-radius: 0.25rem;
         }
 
