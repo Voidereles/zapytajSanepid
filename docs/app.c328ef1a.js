@@ -21736,100 +21736,113 @@ _aos.default.init({
 
 var a = 0;
 $(window).on('scroll', function () {
-  var counter = $('.counters');
-  var oTop = counter.offset().top - window.innerHeight;
+  if (typeof document.querySelector('.counters') != 'undefined' && document.querySelector('.counters') != null) {
+    var counter = $('.counters');
+    var oTop = counter.offset().top - window.innerHeight;
 
-  if (a == 0 && $(window).scrollTop() > oTop) {
-    $('.counters__number').each(function () {
-      var $this = $(this),
-          countTo = $this.attr('data-count');
-      $({
-        countNum: $this.text()
-      }).animate({
-        countNum: countTo
-      }, {
-        duration: 4000,
-        easing: 'swing',
-        step: function step() {
-          $this.text(Math.floor(this.countNum));
-        },
-        complete: function complete() {
-          $this.text(this.countNum);
-        }
+    if (a == 0 && $(window).scrollTop() > oTop) {
+      $('.counters__number').each(function () {
+        var $this = $(this),
+            countTo = $this.attr('data-count');
+        $({
+          countNum: $this.text()
+        }).animate({
+          countNum: countTo
+        }, {
+          duration: 4000,
+          easing: 'swing',
+          step: function step() {
+            $this.text(Math.floor(this.countNum));
+          },
+          complete: function complete() {
+            $this.text(this.countNum);
+          }
+        });
       });
-    });
-    a = 1;
+      a = 1;
+    }
   }
 });
-var infoCarousel = $('.info__carousel');
-infoCarousel.on('initialized.owl.carousel', function (event) {
-  console.log('das');
-  $('.info__carousel .owl-stage').addClass(["d-flex", "align-items-center"]);
-});
-infoCarousel.owlCarousel({
-  loop: true,
-  margin: 20,
-  autoplay: true,
-  autoplayHoverPause: true,
-  autoplayTimeout: 3000,
-  responsiveClass: true,
-  responsive: {
-    0: {
-      items: 2,
-      nav: false,
-      dots: false
-    },
-    600: {
-      items: 3,
-      nav: false,
-      dots: false,
-      stagePadding: 0
-    },
-    1000: {
-      items: 4,
-      nav: false,
-      dots: false
-    }
-  } // autoplay: false
 
-});
-var newsCarousel = $('.news__carousel');
-jQuery(document).ready(function ($) {
-  $(window).bind("load resize", function () {
-    setTimeout(function () {
-      var container_width = $('#fb-container').width();
-      $('#fb-container').html('<div class="fb-page" ' + 'data-href="https://www.facebook.com/cloverepublic/"' + ' data-width="' + container_width + '" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/IniciativaAutoMat"><a href="https://www.facebook.com/cloverepublic/">Clove Republic</a></blockquote></div></div>');
-      FB.XFBML.parse();
-    }, 100);
+if (typeof document.querySelector('.info__carousel') != 'undefined' && document.querySelector('.info__carousel') != null) {
+  console.log('das');
+  var infoCarousel = $('.info__carousel');
+  infoCarousel.on('initialized.owl.carousel', function (event) {
+    console.log('das');
+    $('.info__carousel .owl-stage').addClass(["d-flex", "align-items-center"]);
   });
-});
-newsCarousel.owlCarousel({
-  loop: true,
-  margin: 20,
-  autoplay: true,
-  autoplayHoverPause: true,
-  responsiveClass: true,
-  dots: true,
-  responsive: {
-    0: {
-      items: 1,
-      nav: false,
-      dots: true,
-      autoplayTimeout: 3000
-    },
-    600: {
-      items: 2,
-      nav: false,
-      dots: true,
-      autoplayTimeout: 5000
-    },
-    1000: {
-      items: 3,
-      nav: false,
-      dots: true
+  infoCarousel.owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    autoplayHoverPause: true,
+    autoplayTimeout: 3000,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 2,
+        nav: false,
+        dots: false
+      },
+      600: {
+        items: 3,
+        nav: false,
+        dots: false,
+        stagePadding: 0
+      },
+      1000: {
+        items: 4,
+        nav: false,
+        dots: false
+      }
+    } // autoplay: false
+
+  });
+}
+
+if (typeof document.querySelector('.news__carousel') != 'undefined' && document.querySelector('.news__carousel') != null) {
+  var newsCarousel = $('.news__carousel');
+  newsCarousel.owlCarousel({
+    loop: true,
+    margin: 20,
+    autoplay: true,
+    autoplayHoverPause: true,
+    responsiveClass: true,
+    dots: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+        dots: true,
+        autoplayTimeout: 3000
+      },
+      600: {
+        items: 2,
+        nav: false,
+        dots: true,
+        autoplayTimeout: 5000
+      },
+      1000: {
+        items: 3,
+        nav: false,
+        dots: true
+      }
     }
-  }
-});
+  });
+}
+
+if (typeof document.querySelector('#fb-container') != 'undefined' && document.querySelector('#fb-container') != null) {
+  jQuery(document).ready(function ($) {
+    $(window).bind("load resize", function () {
+      setTimeout(function () {
+        var container_width = $('#fb-container').width();
+        $('#fb-container').html('<div class="fb-page" ' + 'data-href="https://www.facebook.com/cloverepublic/"' + ' data-width="' + container_width + '" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/IniciativaAutoMat"><a href="https://www.facebook.com/cloverepublic/">Clove Republic</a></blockquote></div></div>');
+        FB.XFBML.parse();
+      }, 100);
+    });
+  });
+}
+
 $(function () {
   $("a[href*='#'].btn:not([href='#])").on('click', function (e) {
     var target = $(this).attr("href");
@@ -21840,30 +21853,19 @@ $(function () {
   });
 
   if (window.innerWidth > 992) {
-    var allMoving = document.querySelectorAll(".onmousemove-element");
-    window.addEventListener("mousemove", function (e) {
-      Array.from(allMoving).forEach(function (element) {
-        // element.style.transitionDelay = "0.01s";
-        element.style.transitionDuration = "0.8s";
-        element.style.transform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
-        element.style.webkitTransform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
-        element.style.MozTransform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
-        element.style.msTransform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
-        element.style.OTransform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
+    if (typeof document.querySelector('.onmousemove-element') != 'undefined' && document.querySelector('.onmousemove-element') != null) {
+      var allMoving = document.querySelectorAll(".onmousemove-element");
+      window.addEventListener("mousemove", function (e) {
+        Array.from(allMoving).forEach(function (element) {
+          // element.style.transitionDelay = "0.01s";
+          element.style.transitionDuration = "0.8s";
+          element.style.transform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
+          element.style.webkitTransform = "translateX(" + (-e.clientX / 40).toFixed(0) + "px)" + "translateY(" + (-e.clientY / 33).toFixed(0) + "px)";
+        });
       });
-    });
+    }
   }
-}); // $(document).ready(function ($) {
-//     $(window).bind("load resize", function () {
-//         setTimeout(function () {
-//             var container_width = $('#fb-container').width();
-//             $('#fb-container').html('<div class="fb-page" ' +
-//                 'data-href="https://www.facebook.com/cloverepublic/"' +
-//                 ' data-width="' + container_width + '" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="http://www.facebook.com/IniciativaAutoMat"><a href="https://www.facebook.com/cloverepublic/">Clove Republic</a></blockquote></div></div>');
-//             FB.XFBML.parse();
-//         }, 100);
-//     });
-// });
+});
 },{"bootstrap":"node_modules/bootstrap/dist/js/bootstrap.js","aos":"node_modules/aos/dist/aos.js","owl.carousel":"node_modules/owl.carousel/dist/owl.carousel.js"}],"../../../../../../../../usr/local/share/.config/yarn/global/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -21892,7 +21894,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44341" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44661" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

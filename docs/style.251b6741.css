@@ -195,18 +195,21 @@
 @font-face {
   font-family: 'BalooPaaji';
   font-weight: 700;
+  font-display: swap;
   src: url("BalooPaaji2-Bold.2c07b7d5.ttf");
 }
 
 @font-face {
   font-family: 'BalooPaaji';
   font-weight: 600;
+  font-display: swap;
   src: url("BalooPaaji2-SemiBold.6845e0a8.ttf");
 }
 
 @font-face {
   font-family: 'BalooPaaji';
   font-weight: 400;
+  font-display: swap;
   src: url("BalooPaaji2-Regular.096a06a5.ttf");
 }
 
@@ -356,7 +359,7 @@ body {
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
-  font-family: 'BalooPaaji';
+  font-family: 'BalooPaaji', sans-serif;
   color: #231f20;
   overflow-x: hidden;
   max-width: 100%;
