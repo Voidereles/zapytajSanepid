@@ -21843,6 +21843,10 @@ if (typeof document.querySelector('#fb-container') != 'undefined' && document.qu
   });
 }
 
+if (typeof document.querySelector('.news-page') != 'undefined' && document.querySelector('.news-page') != null) {
+  document.querySelector('main').style.overflow = "initial";
+}
+
 $(function () {
   $("a[href*='#'].btn:not([href='#])").on('click', function (e) {
     var target = $(this).attr("href");
@@ -21894,7 +21898,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36471" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33191" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

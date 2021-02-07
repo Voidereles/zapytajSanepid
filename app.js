@@ -127,6 +127,10 @@ if (typeof (document.querySelector('#fb-container')) != 'undefined' && document.
     });
 }
 
+if (typeof (document.querySelector('.news-page')) != 'undefined' && document.querySelector('.news-page') != null) {
+    document.querySelector('main').style.overflow = "initial";
+}
+
 $(function () {
     $("a[href*='#'].btn:not([href='#])").on('click', function (e) {
         let target = $(this).attr("href");
