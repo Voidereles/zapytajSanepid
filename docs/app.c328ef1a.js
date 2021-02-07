@@ -21844,7 +21844,7 @@ if (typeof document.querySelector('#fb-container') != 'undefined' && document.qu
 }
 
 if (typeof document.querySelector('.news-page') != 'undefined' && document.querySelector('.news-page') != null) {
-  document.querySelector('main').style.overflow = "initial";
+  document.querySelector('.main').style.overflow = "initial";
 }
 
 $(function () {
@@ -21898,7 +21898,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33191" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38329" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

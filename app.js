@@ -128,7 +128,7 @@ if (typeof (document.querySelector('#fb-container')) != 'undefined' && document.
 }
 
 if (typeof (document.querySelector('.news-page')) != 'undefined' && document.querySelector('.news-page') != null) {
-    document.querySelector('main').style.overflow = "initial";
+    document.querySelector('.main').style.overflow = "initial";
 }
 
 $(function () {
