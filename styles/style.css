@@ -169,6 +169,7 @@ body {
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   font-family: 'BalooPaaji', sans-serif;
+  font-display: swap;
   color: #231f20;
   overflow-x: hidden;
   max-width: 100%;
